@@ -22,7 +22,6 @@ header h2 {
 nav ul {
   display: flex; /* Added to ensure list items are displayed inline */
 }
-
 nav ul li {
   list-style: none;
   display: inline-block;
