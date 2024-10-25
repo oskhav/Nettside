@@ -82,5 +82,42 @@ p {
     background-color: antiquewhite;
 }
 
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+  
+.content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+  
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+  
+.box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+  
+.box p {
+    margin-top: 10px;
+    text-align: justify;
   
  
