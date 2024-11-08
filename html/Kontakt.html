@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt</title>
   <link rel="stylesheet" href="../CSS/kontakt.css">
+  <script src="../javaskript/opgaver.js">
 </head>
+
 <body>
 
   <!-- Header Section -->
@@ -44,7 +46,7 @@
       </div>
     </div>
 
-    <!-- Kontakt Skjema -->
+    <!--- Kontakt skjema  (isak was here)-->
     <div class="contact-form">
       <h2>Send meg en melding</h2>
       <form action="#" method="post">
@@ -57,7 +59,7 @@
         <label for="message">Melding:</label>
         <textarea id="message" name="message" rows="4" required></textarea>
 
-        <button type="submit">Send Melding</button>
+        <button type="submit" onclick="sendMail()" >Send Melding</button>
       </form>
     </div>
   </main>
