@@ -1,32 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="no">
 <head>
-  <title>Header & Footer</title>
-  <link rel="stylesheet" href="../css/test.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="../CSS/kontakt.css">
 </head>
 <body>
+
+  <!-- Header Section -->
   <header>
     <div class="logo">
-
+      <h2>Kontakt</h2>
     </div>
     <nav>
       <ul>
         <li><a href="../index.html">Hjem</a></li>
         <li><a href="Om.html">Om</a></li>
         <li><a href="Prosjekter.html">Prosjekter</a></li>
-        <li><a href="Kontakt.html">kontakt</a></li>
-     
+        <li><a href="Kontakt.html">Kontakt</a></li>
       </ul>
     </nav>
   </header>
+
+  <!-- Main Content Section -->
+  <main class="content">
+    <h1>Kontakt meg</h1>
+    <p>Hvis du har spørsmål, ønsker samarbeid, eller bare vil ta en prat, ikke nøl med å ta kontakt!</p>
+
+    <!-- Kontakt Informasjon -->
+    <div class="contact-info">
+      <div class="info-box">
+        <i class="fas fa-envelope"></i>
+        <p><strong>E-post:</strong> oskarhavre@icloud.com</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-phone"></i>
+        <p><strong>Telefon:</strong> 94137618</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <p><strong>Adresse:</strong> Bergen, Norge</p>
+      </div>
+    </div>
+
+    <!-- Kontakt Skjema -->
+    <div class="contact-form">
+      <h2>Send meg en melding</h2>
+      <form action="#" method="post">
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Melding:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Melding</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
   <footer>
-    
-    <!-- Footer content goes here -->
-     
+   
   </footer>
-  <p> kontakt 
-  <br>
-  Mail: oskarhavre@icloud.com <br>
-  telefon: 94137618</p>
+
 </body>
-</html>    
+</html>

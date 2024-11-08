@@ -1,77 +1,77 @@
-*{
+/* Grunnleggende CSS-reset for standardisering av elementer */
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
- 
-header{
+
+/* Styling av header */
+header {
   background-color: black;
-  color: rgb(207, 207, 207);
+  color: rgb(255, 255, 255);
   width: 100%;
-}
- 
-header h2{
-   font-size: 30px;
-}
- 
-header{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 20px
+  padding: 20px;
 }
- 
-nav ul li{
+
+header h2 {
+  font-size: 30px;
+}
+
+/* Navigasjonsmeny-styling */
+nav ul li {
   list-style: none;
   display: inline-block;
 }
- 
-nav ul li a{
+
+nav ul li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 18px;
   padding: 0 15px;
 }
 
+/* Typografisk formatering for tekst og avsnitt */
 h {
   font-size: large;
 }
 
-
-p {
+p, q {
   text-align: center;
 }
 
-q {
-  text-align: center;
-}
-.content{
+/* Layout for innholdselementer */
+.content {
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 25%;
   transform: translateY(-50%);
   text-align: center;
-  color: white;
 }
 
-.content h1{
+.content h1 {
   font-size: 70px;
-  margin-top: 40px;
+  margin-top: 35px;
 }
 
-.content p1{
+.content p1 {
   margin: 20px auto;
   font-weight: 100;
-  line-height: 25px;
-  font-size:  15px;
+  line-height: 50px;
+  font-size: 15px;
 }
+
 
 
 body {
-  width:100%;
+  width: 100%;
   height: 100vh;
+  background-color: #2C3E50; /* Bakgrunnsfarge som matcher bildet */
   background-image: url("../Bilder/IMG_4169.JPG");
-  background-size: cover;
+  background-size: contain; /* Sørger for at bildet ikke blir større enn originalen */
   background-position: center;
+  background-repeat: no-repeat; /* Forhindrer gjentakelse av bildet */
 }
