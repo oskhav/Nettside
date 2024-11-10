@@ -6,32 +6,51 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Styling av header */
 header {
   background-color: black;
-  color: rgb(255, 255, 255);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  color: white;
   padding: 20px;
+  height: 80px; /* Fast høyde for å sikre konsistens */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; /* Sikrer at padding ikke påvirker høyden */
 }
 
 header h2 {
-  font-size: 30px;
+  margin-left: 10px;
+  font-size: 24px; /* Juster fontstørrelse for konsekvent utseende */
 }
 
-/* Navigasjonsmeny-styling */
-nav ul li {
-  list-style: none;
-  display: inline-block;
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 15px; /* Mellomrom mellom navigasjonslenkene */
 }
 
 nav ul li a {
+  color: white;
   text-decoration: none;
-  color: rgb(255, 255, 255);
   font-size: 18px;
-  padding: 0 15px;
+  padding: 5px 10px; /* Gir litt plass rundt lenkene */
+}
+
+@media (max-width: 768px) {
+  /* Sikrer at headeren ser bra ut på mindre skjermer */
+  header {
+      flex-direction: column;
+      height: auto; /* Justerer høyden automatisk på små skjermer */
+      padding: 10px;
+  }
+
+  header h2 {
+      margin: 0;
+  }
+
+  nav ul {
+      margin-top: 10px;
+      gap: 10px;
+  }
 }
 
 /* Typografisk formatering for tekst og avsnitt */
@@ -70,8 +89,9 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #2C3E50; /* Bakgrunnsfarge som matcher bildet */
-  background-image: url("../Bilder/IMG_4169.JPG");
-  background-size: contain; /* Sørger for at bildet ikke blir større enn originalen */
+  background-image: url("../Bilder/IMG_4271.jpg");
+  background-size: cover; /* Bildet dekker hele skjermen */
   background-position: center;
   background-repeat: no-repeat; /* Forhindrer gjentakelse av bildet */
 }
+

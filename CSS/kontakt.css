@@ -16,18 +16,47 @@ header {
     background-color: black;
     color: white;
     padding: 20px;
+    height: 80px; /* Fast høyde for å sikre konsistens */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box; /* Sikrer at padding ikke påvirker høyden */
 }
 
 header h2 {
     margin-left: 10px;
+    font-size: 24px; /* Juster fontstørrelse for konsekvent utseende */
 }
 
 nav ul {
     display: flex;
     list-style-type: none;
+    gap: 15px; /* Mellomrom mellom navigasjonslenkene */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px; /* Gir litt plass rundt lenkene */
+}
+
+@media (max-width: 768px) {
+    /* Sikrer at headeren ser bra ut på mindre skjermer */
+    header {
+        flex-direction: column;
+        height: auto; /* Justerer høyden automatisk på små skjermer */
+        padding: 10px;
+    }
+
+    header h2 {
+        margin: 0;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        gap: 10px;
+    }
 }
 
 nav ul li {
