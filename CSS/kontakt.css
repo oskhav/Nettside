@@ -1,51 +1,47 @@
-/* General Styling */
+
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background-color: #f7f7f7;
-    color: #333;
-    line-height: 1.6;
-}
-
-header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  header {
     background-color: black;
     color: white;
     padding: 20px;
-    height: 80px; /* Fast høyde for å sikre konsistens */
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box; /* Sikrer at padding ikke påvirker høyden */
-}
-
-header h2 {
+    box-sizing: border-box; 
+  }
+  
+  header h2 {
     margin-left: 10px;
-    font-size: 24px; /* Juster fontstørrelse for konsekvent utseende */
-}
-
-nav ul {
+    font-size: 24px; 
+  }
+  
+  nav ul {
     display: flex;
     list-style-type: none;
-    gap: 15px; /* Mellomrom mellom navigasjonslenkene */
-}
-
-nav ul li a {
+    gap: 15px; 
+  }
+  
+  nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 5px 10px; /* Gir litt plass rundt lenkene */
-}
+    padding: 5px 10px;
+  }
+  
 
 @media (max-width: 768px) {
-    /* Sikrer at headeren ser bra ut på mindre skjermer */
+    
     header {
         flex-direction: column;
-        height: auto; /* Justerer høyden automatisk på små skjermer */
+        height: auto;
         padding: 10px;
     }
 
@@ -59,16 +55,9 @@ nav ul li a {
     }
 }
 
-nav ul li {
-    margin: 0 15px;
-}
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
 
-/* Main Content */
+
 .content {
     text-align: center;
     padding: 20px;
@@ -81,7 +70,7 @@ h1 {
     color: #333;
 }
 
-/* Contact Information Boxes */
+
 .contact-info {
     display: flex;
     justify-content: space-around;
@@ -103,7 +92,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Contact Form Styling */
+
 .contact-form {
     background-color: white;
     padding: 20px;
@@ -146,7 +135,7 @@ h1 {
     background-color: #005fa3;
 }
 
-/* Footer */
+
 footer {
     background-color: black;
     color: white;

@@ -1,4 +1,4 @@
-/* Grunnleggende CSS-reset for standardisering av elementer */
+
 * {
   padding: 0;
   margin: 0;
@@ -10,33 +10,33 @@ header {
   background-color: black;
   color: white;
   padding: 20px;
-  height: 80px; /* Fast høyde for å sikre konsistens */
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box; /* Sikrer at padding ikke påvirker høyden */
+  box-sizing: border-box; 
 }
 
 header h2 {
   margin-left: 10px;
-  font-size: 24px; /* Juster fontstørrelse for konsekvent utseende */
+  font-size: 24px; 
 }
 
 nav ul {
   display: flex;
   list-style-type: none;
-  gap: 15px; /* Mellomrom mellom navigasjonslenkene */
+  gap: 15px; 
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  padding: 5px 10px; /* Gir litt plass rundt lenkene */
+  padding: 5px 10px;
 }
 
 @media (max-width: 768px) {
-  /* Sikrer at headeren ser bra ut på mindre skjermer */
+
   header {
       flex-direction: column;
       height: auto; /* Justerer høyden automatisk på små skjermer */
@@ -88,10 +88,9 @@ p, q {
 body {
   width: 100%;
   height: 100vh;
-  background-color: #2C3E50; /* Bakgrunnsfarge som matcher bildet */
+  background-color: #2C3E50; 
   background-image: url("../Bilder/IMG_4271.jpg");
-  background-size: cover; /* Bildet dekker hele skjermen */
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; /* Forhindrer gjentakelse av bildet */
-}
+  background-repeat: no-repeat;}
 
