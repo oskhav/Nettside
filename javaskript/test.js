@@ -1,24 +1,9 @@
-document.getElementById("addTaskButton").addEventListener("click", addtask)
-document.getElementById("removeTaskButton").addEventListener("click", removeTask)
+let fruits = ["eple", "banan"];
 
-function addtask() {
-    let task = document.getElementById("taskInput").value
+console.log("Opprinnelig liste:", fruits);
 
-    let listItem = document.createElement("li");
-    listItem.textContent = task
+fruits.push("appelsin");
+console.log("Etter push:", fruits);
 
-    document.getElementById('taskList').appendChild(listItem)
-}
-function removeTask() {
-    let task = document.getElementById("taskInput").value;
-    let taskList = document.getElementById('taskList');
-    let listItems = taskList.getElementsByTagName('li');
-
-    for (let i = 0; i < listItems.length; i++){
-        if (listItems[i].textContent === task) {
-            taskList.removeChild(listItems[i]);
-            return
-        }
-    }
-    document.getElementById('taskList').appendChild(listItem)
-}
+fruits.pop();
+console.log("Etter pop:", fruits);
