@@ -1,4 +1,3 @@
-
 * {
   padding: 0;
   margin: 0;
@@ -35,55 +34,33 @@ nav ul li a {
   padding: 5px 10px;
 }
 
-
-
-
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #e6e6e6;
-    color: #333;
-    line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #e6e6e6;
+  color: #333;
+  line-height: 1.6;
 }
 
 p {
-    border: 5px solid #333;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    margin: 10px 10px 10px 10px;
-    line-height: 1.5;
-    text-align: justify;
-    display: inline-block;
-    text-align: center;
-}
-
-.content {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.content img {
-    width: 800px;
-    height: auto;
-    margin-top: 20px;
-}
-
-.content p{
-    width: 800px;
-    margin-bottom: 30px;
-    background-color: antiquewhite;
+  border: 5px solid #333;
+  padding: 15px 20px;
+  margin: 10px;
+  line-height: 1.5;
+  text-align: center;
+  display: inline-block;
+  width: 90%; /* Standard bredde */
+  max-width: 600px; /* Maksimal bredde */
+  background-color: antiquewhite;
+  box-sizing: border-box;
 }
 
 h1 {
   text-align: center;
   margin: 20px 0;
 }
-  
+
 .content {
   margin-top: 20px;
   display: flex;
@@ -93,29 +70,57 @@ h1 {
   text-align: center;
   padding: 20px;
 }
-  
+
+.content img {
+  width: 800px;
+  height: auto;
+  margin-top: 20px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
-  
+
 .box {
   background-color: white;
   padding: 20px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-  
+
 .box img {
-  width: 50%;
+  width: 60%;
   height: auto;
   border-radius: 10px;
 }
-  
+
 .box p {
-    margin-top: 10px;
-    text-align: justify;
+  margin-top: 10px;
+  text-align: justify;
 }
-  
- 
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  p {
+    width: 100%; /* Full bredde for mindre skjermer */
+    font-size: 14px; /* Juster skriftstørrelse */
+  }
+
+  .content img {
+    width: 90%; /* Tilpass bilder for mindre skjermer */
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    padding: 10px; /* Reduser padding for veldig små skjermer */
+    font-size: 12px; /* Mindre skriftstørrelse */
+  }
+
+  .content img {
+    width: 100%; /* Full bredde på bilder */
+  }
+}
