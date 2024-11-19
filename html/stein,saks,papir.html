@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stein Saks Papir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1e1e2f;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #292941;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .choices {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .choice {
+            padding: 15px;
+            border-radius: 50%;
+            background-color: #ff6f61;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .choice:hover {
+            background-color: #ff8979;
+            transform: scale(1.2);
+        }
+
+        .result {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stein, Saks, Papir</h1>
+        <div class="choices">
+            <div class="choice" data-choice="stein">🪨</div>
+            <div class="choice" data-choice="saks">✂️</div>
+            <div class="choice" data-choice="papir">📄</div>
+        </div>
+        <div class="result" id="result">Velg ditt trekk!</div>
+    </div>
+    <script src="/javaskript/stein,saks,papir.js"></script>
+</body>
+</html>
