@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min Nettside</title>
-    <!-- Notat: Dette er hodet på HTML-dokumentet hvor metadata og tittel er definert. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="../CSS/kontakt.css">
+  <script src="../javaskript/opgaver.js"></script>
 </head>
+
 <body>
-    <!-- Hjem -->
-    <section id="hjem">
-        <h1>Hjem</h1>
-        <!-- Notat: Velkommen til min nettside! Her finner du informasjon om mine prosjekter og hvordan du kan kontakte meg. -->
-    </section>
 
-    <!-- Om -->
-    <section id="om">
-        <h1>Om</h1>
-        <!-- Notat: Her kan du lese mer om meg, min bakgrunn og mine interesser. -->
-    </section>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+   
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Hjem</a></li>
+        <li><a href="Om.html">Om</a></li>
+        <li><a href="Prosjekter.html">Prosjekter</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Prosjekter -->
-    <section id="prosjekter">
-        <h1>Prosjekter</h1>
-        <!-- Notat: En oversikt over mine tidligere og nåværende prosjekter, inkludert detaljer og resultater. -->
-    </section>
+  <div class="content">
+    <h1>Kontakt meg</h1>
+   
 
-    <!-- Kontakt -->
-    <section id="kontakt">
-        <h1>Kontakt</h1>
-        <!-- Notat: Ta kontakt med meg via e-post, telefon eller ved å sende en melding gjennom skjemaet nedenfor. -->
-    </section>
+    <div class="contact-info">
+      <div class="info-box">
+        <i class="fas fa-envelope"></i>
+        <p><strong>E-post:</strong> oskarhavre@icloud.com</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-phone"></i>
+        <p><strong>Telefon:</strong> 94137618</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <p><strong>Adresse:</strong> Bergen, Norge</p>
+      </div>
+    </div>
 
-    <!-- Kontakt meg -->
-    <section id="kontakt-meg">
-        <h1>Kontakt meg</h1>
-        <form>
-            <label for="email">E-post:</label>
-            <input type="email" id="email" name="email" value="oskarhavre@icloud.com"><br>
-            <!-- Notat: Input-felt for e-postadresse. -->
+    <div class="contact-form">
+      <h2>Send meg en melding</h2>
 
-            <label for="phone">Telefon:</label>
-            <input type="tel" id="phone" name="phone" value="94137618"><br>
-            <!-- Notat: Input-felt for telefonnummer. -->
 
-            <label for="address">Adresse:</label>
-            <input type="text" id="address" name="address" value="Bergen, Norge"><br>
-            <!-- Notat: Input-felt for adresse. -->
+        <button type="submit" onclick="sendMail()">Send Melding</button>
+      </form>
+    </div>
 
-            <label for="message">Melding:</label>
-            <textarea id="message" name="message"></textarea><br>
-            <!-- Notat: Tekstområde for melding. -->
+    <footer>
+      <!-- Add footer content here if needed -->
+    </footer>
 
-            <button type="submit">Send Melding</button>
-            <!-- Notat: Knapp for å sende meldingen. -->
-        </form>
-        <!-- Notat: Fyll ut skjemaet for å sende meg en melding direkte. Jeg svarer så snart som mulig. -->
-    </section>
-</body>
+  </body>
 </html>

@@ -1,105 +1,105 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0; /* Fjerner all standard padding */
+  margin: 0; /* Fjerner all standard margin */
+  box-sizing: border-box; /* Inkluderer padding og border i elementets totale bredde og høyde */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Setter standard font */
 }
 
 header {
-  background-color: black;
-  color: white;
-  padding: 20px;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box; 
+  background-color: black; /* Setter bakgrunnsfarge til svart */
+  color: white; /* Setter tekstfarge til hvit */
+  padding: 20px; /* Legger til 20px padding rundt headeren */
+  height: 80px; /* Setter høyden på headeren til 80px */
+  display: flex; /* Bruker flexbox for layout */
+  justify-content: space-between; /* Fordeler elementene med plass mellom dem */
+  align-items: center; /* Sentraliserer elementene vertikalt */
+  box-sizing: border-box; /* Inkluderer padding og border i elementets totale bredde og høyde */
 }
 
 header h2 {
-  margin-left: 10px;
-  font-size: 24px; 
+  margin-left: 10px; /* Legger til 10px margin til venstre for h2 */
+  font-size: 24px; /* Setter fontstørrelsen til 24px */
 }
 
 nav ul {
-  display: flex;
-  list-style-type: none;
-  gap: 15px; 
+  display: flex; /* Bruker flexbox for layout */
+  list-style-type: none; /* Fjerner punktmerking fra listen */
+  gap: 15px; /* Legger til 15px mellomrom mellom listeelementene */
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 5px 10px;
+  color: white; /* Setter tekstfarge til hvit */
+  text-decoration: none; /* Fjerner understreking fra lenkene */
+  font-size: 18px; /* Setter fontstørrelsen til 18px */
+  padding: 5px 10px; /* Legger til 5px topp/bunn og 10px venstre/høyre padding */
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #e6e6e6;
-  color: #333;
-  line-height: 1.6;
+  margin: 0; /* Fjerner all standard margin */
+  padding: 0; /* Fjerner all standard padding */
+  font-family: 'Arial', sans-serif; /* Setter standard font */
+  background-color: #e6e6e6; /* Setter bakgrunnsfargen til en lys grå farge */
+  color: #333; /* Setter tekstfargen til mørk grå */
+  line-height: 1.6; /* Setter linjehøyden til 1.6 */
 }
 
 p {
-  border: 5px solid #333;
-  padding: 15px 20px;
-  margin: 10px;
-  line-height: 1.5;
-  text-align: center;
-  display: inline-block;
-  width: 90%; /* Standard bredde */
-  max-width: 600px; /* Maksimal bredde */
-  background-color: antiquewhite;
-  box-sizing: border-box;
+  border: 5px solid #333; /* Legger til en 5px solid mørk grå kant */
+  padding: 15px 20px; /* Legger til 15px topp/bunn og 20px venstre/høyre padding */
+  margin: 10px; /* Legger til 10px margin rundt avsnittet */
+  line-height: 1.5; /* Setter linjehøyden til 1.5 */
+  text-align: center; /* Sentraliserer teksten */
+  display: inline-block; /* Viser elementet som inline-block */
+  width: 90%; /* Setter bredden til 90% */
+  max-width: 600px; /* Setter maksimal bredde til 600px */
+  background-color: antiquewhite; /* Setter bakgrunnsfargen til antikkhvit */
+  box-sizing: border-box; /* Inkluderer padding og border i elementets totale bredde og høyde */
 }
 
 h1 {
-  text-align: center;
-  margin: 20px 0;
+  text-align: center; /* Sentraliserer teksten */
+  margin: 20px 0; /* Legger til 20px topp/bunn margin */
 }
 
 .content {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+  margin-top: 20px; /* Legger til 20px margin på toppen */
+  display: flex; /* Bruker flexbox for layout */
+  flex-direction: column; /* Setter flex retning til kolonne */
+  justify-content: center; /* Sentraliserer innholdet vertikalt */
+  align-items: center; /* Sentraliserer innholdet horisontalt */
+  text-align: center; /* Sentraliserer teksten */
+  padding: 20px; /* Legger til 20px padding */
 }
 
 .content img {
-  width: 800px;
-  height: auto;
-  margin-top: 20px;
+  width: 800px; /* Setter bredden til 800px */
+  height: auto; /* Justerer høyden automatisk */
+  margin-top: 20px; /* Legger til 20px margin på toppen */
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
+  display: grid; /* Bruker grid layout */
+  grid-template-columns: repeat(1, 1fr); /* Setter en kolonne som tar opp 1 fraksjon av tilgjengelig plass */
+  gap: 20px; /* Legger til 20px mellomrom mellom grid elementene */
 }
 
 .box {
-  background-color: white;
-  padding: 20px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white; /* Setter bakgrunnsfargen til hvit */
+  padding: 20px; /* Legger til 20px padding */
+  height: auto; /* Justerer høyden automatisk */
+  border-radius: 10px; /* Legger til 10px avrunding på kantene */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Legger til en svak skygge */
 }
 
 .box img {
-  width: 60%;
-  height: auto;
-  border-radius: 10px;
+  width: 60%; /* Setter bredden til 60% */
+  height: auto; /* Justerer høyden automatisk */
+  border-radius: 10px; /* Legger til 10px avrunding på kantene */
 }
 
 .box p {
-  margin-top: 10px;
-  text-align: justify;
+  margin-top: 10px; /* Legger til 10px margin på toppen */
+  text-align: justify; /* Justerer teksten til begge sider */
 }
 
 /* Media Queries for Responsiveness */

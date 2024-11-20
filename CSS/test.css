@@ -1,96 +1,92 @@
-
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0; /* Fjerner all standard padding */
+  margin: 0; /* Fjerner all standard margin */
+  box-sizing: border-box; /* Inkluderer padding og border i elementets totale bredde og høyde */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Setter standard font */
 }
 
 header {
-  background-color: black;
-  color: white;
-  padding: 20px;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box; 
+  background-color: black; /* Setter bakgrunnsfarge til svart */
+  color: white; /* Setter tekstfarge til hvit */
+  padding: 20px; /* Legger til 20px padding rundt headeren */
+  height: 80px; /* Setter høyden på headeren til 80px */
+  display: flex; /* Bruker flexbox for layout */
+  justify-content: space-between; /* Fordeler elementene med plass mellom dem */
+  align-items: center; /* Sentraliserer elementene vertikalt */
+  box-sizing: border-box; /* Inkluderer padding og border i elementets totale bredde og høyde */
 }
 
 header h2 {
-  margin-left: 10px;
-  font-size: 24px; 
+  margin-left: 10px; /* Legger til 10px margin til venstre for h2 */
+  font-size: 24px; /* Setter fontstørrelsen til 24px */
 }
 
 nav ul {
-  display: flex;
-  list-style-type: none;
-  gap: 15px; 
+  display: flex; /* Bruker flexbox for layout */
+  list-style-type: none; /* Fjerner punktmerking fra listen */
+  gap: 15px; /* Legger til 15px mellomrom mellom listeelementene */
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 5px 10px;
+  color: white; /* Setter tekstfarge til hvit */
+  text-decoration: none; /* Fjerner understreking fra lenkene */
+  font-size: 18px; /* Setter fontstørrelsen til 18px */
+  padding: 5px 10px; /* Legger til 5px topp/bunn og 10px venstre/høyre padding */
 }
 
 @media (max-width: 768px) {
-
   header {
-      flex-direction: column;
-      height: auto; /* Justerer høyden automatisk på små skjermer */
-      padding: 10px;
+    flex-direction: column; /* Endrer flex retning til kolonne på små skjermer */
+    height: auto; /* Justerer høyden automatisk på små skjermer */
+    padding: 10px; /* Reduserer padding til 10px */
   }
 
   header h2 {
-      margin: 0;
+    margin: 0; /* Fjerner margin */
   }
 
   nav ul {
-      margin-top: 10px;
-      gap: 10px;
+    margin-top: 10px; /* Legger til 10px margin på toppen */
+    gap: 10px; /* Reduserer gap til 10px */
   }
 }
 
 /* Typografisk formatering for tekst og avsnitt */
 h {
-  font-size: large;
+  font-size: large; /* Setter fontstørrelsen til stor */
 }
 
 p, q {
-  text-align: center;
+  text-align: center; /* Sentraliserer teksten */
 }
 
 /* Layout for innholdselementer */
 .content {
-  width: 100%;
-  position: absolute;
-  top: 25%;
-  transform: translateY(-50%);
-  text-align: center;
+  width: 100%; /* Setter bredden til 100% */
+  position: absolute; /* Plasserer elementet absolutt */
+  top: 25%; /* Plasserer elementet 25% fra toppen */
+  transform: translateY(-50%); /* Flytter elementet opp 50% av sin egen høyde */
+  text-align: center; /* Sentraliserer teksten */
 }
 
 .content h1 {
-  font-size: 70px;
-  margin-top: 35px;
+  font-size: 70px; /* Setter fontstørrelsen til 70px */
+  margin-top: 35px; /* Legger til 35px margin på toppen */
 }
 
 .content p1 {
-  margin: 20px auto;
-  font-weight: 100;
-  line-height: 50px;
-  font-size: 15px;
+  margin: 20px auto; /* Legger til 20px margin på topp/bunn og auto på venstre/høyre */
+  font-weight: 100; /* Setter fontvekten til 100 */
+  line-height: 50px; /* Setter linjehøyden til 50px */
+  font-size: 15px; /* Setter fontstørrelsen til 15px */
 }
 
-
-
 body {
-  width: 100%;
-  height: 100vh;
-  background-color: #2C3E50; 
-  background-image: url("../Bilder/IMG_4271.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;}
-
+  width: 100%; /* Setter bredden til 100% */
+  height: 100vh; /* Setter høyden til 100% av viewport høyden */
+  background-color: #2C3E50; /* Setter bakgrunnsfargen til en mørk blågrå farge */
+  background-image: url("../Bilder/IMG_4271.jpg"); /* Setter bakgrunnsbildet */
+  background-size: cover; /* Dekker hele bakgrunnen med bildet */
+  background-position: center; /* Plasserer bildet i midten */
+  background-repeat: no-repeat; /* Hindrer at bildet gjentas */
+}
