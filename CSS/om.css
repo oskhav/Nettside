@@ -43,17 +43,35 @@ body {
   line-height: 1.6; /* Setter linjehøyden til 1.6 */
 }
 
-p {
-  border: 5px solid #333; /* Legger til en 5px solid mørk grå kant */
-  padding: 15px 20px; /* Legger til 15px topp/bunn og 20px venstre/høyre padding */
-  margin: 10px; /* Legger til 10px margin rundt avsnittet */
-  line-height: 1.5; /* Setter linjehøyden til 1.5 */
-  text-align: center; /* Sentraliserer teksten */
-  display: inline-block; /* Viser elementet som inline-block */
-  width: 90%; /* Setter bredden til 90% */
-  max-width: 600px; /* Setter maksimal bredde til 600px */
-  background-color: antiquewhite; /* Setter bakgrunnsfargen til antikkhvit */
-  box-sizing: border-box; /* Inkluderer padding og border i elementets totale bredde og høyde */
+.text-section p {
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.5;
+  max-width: 800px; /* Begrens bredden på teksten */
+  position: relative; /* For å kunne plassere bildet absolutt */
+}
+
+.text-section img {
+  float: left; /* Flyter bildet til venstre */
+  margin-right: 20px; /* Legger til litt avstand mellom tekst og bilde */
+  max-width: 50%; /* Justerer størrelsen på bildet */
+}
+
+
+
+
+.text-section2 p {
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.5;
+  max-width: 800px; /* Begrens bredden på teksten */
+  position: relative; /* For å kunne plassere bildet absolutt */
+}
+
+.text-section2 img {
+  float: right; /* Flyter bildet til venstre */
+  margin-right: 20px; /* Legger til litt avstand mellom tekst og bilde */
+  max-width: 50%; /* Justerer størrelsen på bildet */
 }
 
 h1 {
@@ -124,3 +142,5 @@ h1 {
     width: 100%; /* Full bredde på bilder */
   }
 }
+
+
