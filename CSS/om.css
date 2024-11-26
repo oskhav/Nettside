@@ -44,27 +44,37 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px; /* Økt mellomrom mellom boksene */
+  gap: 40px;
 }
 
 .text-section h2 {
   font-size: 2em;
-  text-align: center;
-  margin-bottom: 20px; /* Mellomrom under overskriften */
+  text-align: center; /* Midtstill overskriftene */
+  margin-bottom: 20px;
 }
 
 .text-section p {
   font-size: 1.2em;
   line-height: 1.6;
-  max-width: 800px;
-  margin-bottom: 20px; /* Mellomrom under hvert avsnitt */
+  max-width: 600px; /* Reduser bredden på tekstblokkene */
+  margin-bottom: 20px;
+  text-align: left; /* Venstrejuster teksten */
 }
 
+/* Bildejustering */
 .text-section img {
-  float: left;
-  margin-right: 20px;
-  max-width: 50%;
+  width: 400px; /* Øk størrelsen på bildene */
+  height: 400px; /* Øk størrelsen på bildene */
+  object-fit: contain; /* Sørger for at hele bildet vises uten å bli beskåret */
   border-radius: 8px;
+  margin-right: 20px; /* Litt plass mellom bilde og tekst */
 }
 
-
+/* Flexbox for tekst og bilde */
+.content {
+  display: flex; /* Bruk flexbox for å plassere bilde og tekst på samme linje */
+  align-items: flex-start; /* Plasser teksten øverst i forhold til bildet */
+  gap: 20px; /* Litt plass mellom bilde og tekst */
+  max-width: 1000px; /* Reduser maksimal bredde på innholdet */
+  margin: 0 auto 40px; /* Sentrer innholdet og legg til mellomrom mellom seksjoner */
+}
