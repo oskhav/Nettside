@@ -1,5 +1,4 @@
-
-
+/* Generelle stiler */
 * {
     padding: 0;
     margin: 0;
@@ -7,119 +6,116 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
-/* Header-styling */
-header {
-    background-color: black; /* Sort bakgrunnsfarge */
-    color: white; /* Hvit tekstfarge */
-    padding: 20px; /* Indre avstand rundt headeren */
-    display: flex; /* Bruker flexbox for layout */
-    justify-content: center; /* Sentrerer innholdet horisontalt */
-    align-items: center; /* Sentrerer innholdet vertikalt */
-  }
-  
-  /* Styling for navigasjonslisten */
-  header nav ul {
-    display: flex; /* Viser menyen som en horisontal liste */
-    list-style: none; /* Fjerner standard punktmarkører */
-    gap: 15px; /* Legger avstand mellom menyvalgene */
-  }
-  
-  /* Styling for hver lenke i menyen */
-  header nav ul li a {
-    color: white; /* Hvit tekstfarge på lenkene */
-    text-decoration: none; /* Fjerner standard understreking */
-    font-size: 18px; /* Setter en passende tekststørrelse */
-    padding: 5px 10px; /* Indre avstand rundt lenketeksten */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover-effekt */
-  }
-  
-  /* Hover-effekt for menylenkene */
-  header nav ul li a:hover {
-    background-color: white; /* Hvit bakgrunn ved hover */
-    color: black; /* Sort tekstfarge ved hover */
-    border-radius: 5px; /* Runde hjørner på bakgrunnen */
-  }
-  
-
-
-
-
-.content {
-    text-align: center;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-h1 {
-    margin-bottom: 10px;
+  body {
+    background-color: #e6e6e6;
     color: #333;
-}
-
-
-.contact-info {
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: black;
+    color: white;
+    padding: 30px; /* Økt padding */
+    text-align: center;
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Økt gap */
+    list-style: none;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px; /* Økt font-størrelse */
+    padding: 10px 15px; /* Økt padding */
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 30px 0; /* Økt margin */
+    font-size: 2.5em; /* Økt font-størrelse */
+  }
+  
+  .content {
+    text-align: center;
+    padding: 30px; /* Økt padding */
+    max-width: 900px; /* Økt maks bredde */
+    margin: 0 auto;
+  }
+  
+  .contact-info {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0;
-}
-
-.info-box {
+    margin: 30px 0; /* Økt margin */
+  }
+  
+  .info-box {
     background-color: white;
-    padding: 20px;
+    padding: 30px; /* Økt padding */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-basis: 30%;
     text-align: center;
-}
-
-.info-box i {
-    font-size: 24px;
+  }
+  
+  .info-box i {
+    font-size: 30px; /* Økt font-størrelse */
     color: #0077cc;
-    margin-bottom: 10px;
-}
-
-
-.contact-form {
+    margin-bottom: 15px; /* Økt margin */
+  }
+  
+  .contact-form {
     background-color: white;
-    padding: 20px;
+    padding: 30px; /* Økt padding */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 700px; /* Økt maks bredde */
     margin: 0 auto;
-    margin-top: 20px;
-}
-
-.contact-form h2 {
-    margin-bottom: 15px;
-}
-
-.contact-form label {
+    margin-top: 30px; /* Økt margin */
+  }
+  
+  .contact-form h2 {
+    margin-bottom: 20px; /* Økt margin */
+    font-size: 2em; /* Økt font-størrelse */
+  }
+  
+  .contact-form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* Økt margin */
     font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
+    font-size: 1.2em; /* Økt font-størrelse */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 15px; /* Økt padding */
+    margin-bottom: 20px; /* Økt margin */
     border: 1px solid #ddd;
     border-radius: 5px;
-}
-
-.contact-form button {
+    font-size: 1.1em; /* Økt font-størrelse */
+  }
+  
+  .contact-form button {
     background-color: #0077cc;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Økt padding */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.contact-form button:hover {
+    font-size: 1.2em; /* Økt font-størrelse */
+  }
+  
+  .contact-form button:hover {
     background-color: #005fa3;
-}
-
-
-
+  }
