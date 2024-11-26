@@ -92,3 +92,109 @@ h1 {
 .box a:hover {
   text-decoration: underline;
 }
+
+
+/* ======= RESET STYLES ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+/* ======= HEADER ======= */
+header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+/* ======= CONTENT ======= */
+.content2 {
+  padding: 40px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Sett opp et rutenett med to kolonner */
+  gap: 10px; /* Legg til mellomrom mellom bildene */
+}
+
+.box2, .box {
+  position: relative;
+}
+
+.box2 img, .box img {
+  width: 100%; /* Sett bredden til 100% av containeren */
+  height: auto; /* La høyden justeres automatisk */
+  aspect-ratio: 1 / 1; /* Behold et kvadratisk forhold */
+  object-fit: cover; /* Sørger for at bildet fyller området uten å forvrenge */
+  display: block;
+  cursor: pointer; /* Legg til en peker for å indikere at bildet er klikkbart */
+  border-radius: 8px; /* Legg til avrundede hjørner for et mer estetisk utseende */
+}
+
+/* ======= MODAL ======= */
+.modal {
+  display: none; /* Skjult som standard */
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}

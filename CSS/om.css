@@ -63,9 +63,10 @@ header nav ul li a:hover {
 
 /* Bildejustering */
 .text-section img {
-  width: 400px; /* Øk størrelsen på bildene */
-  height: 400px; /* Øk størrelsen på bildene */
-  object-fit: contain; /* Sørger for at hele bildet vises uten å bli beskåret */
+  width: 100%; /* Sett bredden til 100% av containeren */
+  max-width: 400px; /* Sett en maksimal bredde for bildene */
+  height: auto; /* La høyden justeres automatisk */
+  object-fit: cover; /* Sørger for at bildet fyller området uten å forvrenge */
   border-radius: 8px;
   margin-right: 20px; /* Litt plass mellom bilde og tekst */
 }
