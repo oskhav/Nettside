@@ -155,3 +155,64 @@ footer ul li a {
 footer ul li a:hover {
   color: #ccc; /* Lys grå farge ved hover */
 }
+
+
+
+/* OM */
+
+
+.text-section2 {
+  padding: 40px;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.text-section2 h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.text-section2 p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Bildejustering */
+.text-section2 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+/* Flexbox for tekst og bilde */
+.content2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+/* RESPONSIV DESIGN */
+@media (max-width: 768px) {
+  .content2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content2 img {
+    margin-right: 0;
+    max-width: 80%;
+  }
+}

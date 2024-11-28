@@ -37,7 +37,7 @@ header nav ul li a:hover {
 }
 
 /* ======= TEXT SECTION ======= */
-.text-section {
+.text-section2 {
   padding: 40px;
   background-color: #f4f4f4;
   color: #333;
@@ -47,35 +47,48 @@ header nav ul li a:hover {
   gap: 40px;
 }
 
-.text-section h2 {
+.text-section2 h2 {
   font-size: 2em;
-  text-align: center; /* Midtstill overskriftene */
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.text-section p {
+.text-section2 p {
   font-size: 1.2em;
   line-height: 1.6;
-  max-width: 600px; /* Reduser bredden på tekstblokkene */
+  max-width: 600px;
   margin-bottom: 20px;
-  text-align: left; /* Venstrejuster teksten */
+  text-align: left;
 }
 
 /* Bildejustering */
-.text-section img {
-  width: 100%; /* Sett bredden til 100% av containeren */
-  max-width: 400px; /* Sett en maksimal bredde for bildene */
-  height: auto; /* La høyden justeres automatisk */
-  object-fit: cover; /* Sørger for at bildet fyller området uten å forvrenge */
+.text-section2 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
   border-radius: 8px;
-  margin-right: 20px; /* Litt plass mellom bilde og tekst */
+  margin-right: 20px;
 }
 
 /* Flexbox for tekst og bilde */
-.content {
-  display: flex; /* Bruk flexbox for å plassere bilde og tekst på samme linje */
-  align-items: flex-start; /* Plasser teksten øverst i forhold til bildet */
-  gap: 20px; /* Litt plass mellom bilde og tekst */
-  max-width: 1000px; /* Reduser maksimal bredde på innholdet */
-  margin: 0 auto 40px; /* Sentrer innholdet og legg til mellomrom mellom seksjoner */
+.content2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+/* RESPONSIV DESIGN */
+@media (max-width: 768px) {
+  .content2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content2 img {
+    margin-right: 0;
+    max-width: 80%;
+  }
 }
