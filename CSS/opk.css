@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', sans-serif;
 }
 
 body {
@@ -40,204 +40,38 @@ header nav ul li a:hover {
   border-radius: 5px;
 }
 
-h1 {
+main h1 {
   text-align: center;
   margin: 20px 0;
+  color: #444;
 }
 
-.content {
-  padding: 20px;
-}
-
-.grid {
+.grid4 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin: 0 auto;
+  padding: 20px;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
-.box {
-  height: 300px; /* Fast høyde for boksene */
-  background-size: cover; /* Bildet fyller boksen */
-  background-position: center; /* Sentrerer bildet */
-  background-repeat: no-repeat; /* Ingen repetisjon */
-  border-radius: 10px;
+.box4 {
+  position: relative;
+  width: 100%;
+  height: 300px;
   overflow: hidden;
-  position: relative;
-}
-
-.box .overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Halvtransparent overlegg */
-  color: white;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  font-size: 16px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.box:hover .overlay {
-  opacity: 1; /* Synlig ved hover */
-}
-
-.box a {
-  color: #ffcc00;
-  text-decoration: none;
-}
-
-.box a:hover {
-  text-decoration: underline;
-}
-
-
-/* ======= RESET STYLES ======= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Gill Sans', sans-serif;
-}
-
-/* ======= HEADER ======= */
-header {
-  background-color: black;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 5px 10px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-header nav ul li a:hover {
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-}
-
-/* ======= CONTENT ======= */
-.content2 {
-  padding: 40px;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-}
-
-.grid2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Sett opp et rutenett med to kolonner */
-  gap: 10px; /* Legg til mellomrom mellom bildene */
-}
-
-.box2, .box {
-  position: relative;
-}
-
-.box2 img, .box img {
-  width: 100%; /* Sett bredden til 100% av containeren */
-  height: auto; /* La høyden justeres automatisk */
-  aspect-ratio: 1 / 1; /* Behold et kvadratisk forhold */
-  object-fit: cover; /* Sørger for at bildet fyller området uten å forvrenge */
-  display: block;
-  cursor: pointer; /* Legg til en peker for å indikere at bildet er klikkbart */
-  border-radius: 8px; /* Legg til avrundede hjørner for et mer estetisk utseende */
-}
-
-/* ======= MODAL ======= */
-.modal {
-  display: none; /* Skjult som standard */
-  position: fixed;
-  z-index: 1;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
-
-
-.content2 {
-  padding: 40px;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-}
-
-.grid2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Sett opp et rutenett med to kolonner */
-  gap: 10px; /* Legg til mellomrom mellom bildene */
-  width: 100%;
-  max-width: 1200px;
-}
-
-.box2, .box {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* 1:1 Aspect Ratio */
-  overflow: hidden;
-}
-
-.box2 img, .box img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.box4 img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Sørger for at bildet fyller området uten å forvrenge */
-  display: block;
-  cursor: pointer; /* Legg til en peker for å indikere at bildet er klikkbart */
-  border-radius: 8px; /* Legg til avrundede hjørner for et mer estetisk utseende */
+  object-fit: cover;
 }
 
-/* ======= MODAL ======= */
 .modal {
-  display: none; /* Skjult som standard */
+  display: none;
   position: fixed;
   z-index: 1;
   padding-top: 60px;
@@ -246,8 +80,7 @@ header nav ul li a:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
@@ -264,7 +97,7 @@ header nav ul li a:hover {
   color: #fff;
   font-size: 40px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .close:hover,

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="no">
 <head>
-  <title>Oskar Nygård Havre</title>
-  <link rel="stylesheet" href="../CSS/opk.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oskar Nygård Havre - Prosjekter</title>
+  <link rel="stylesheet" href="../CSS/test.css">
 </head>
 <body>
   <header>
@@ -16,57 +18,35 @@
       </ul>
     </nav>
   </header>
-  <h1>Prosjekter</h1>
-  <div class="content2">
-    <div class="grid2">
-      <div class="box2">
-        <h2></h2>
-        <img src="../Bilder/mine bilder/blomst.JPEG" alt="" onclick="openModal(this)">
+
+  
+    <h1>Prosjekter</h1>
+    <div class="grid4">
+      <div class="box4">
+        <img src="../Bilder/mine bilder/blomst.JPEG" alt="Blomst">
       </div>
-      <div class="box">
-        <h2></h2>
-        <img src="../Bilder/mine bilder/fjell.JPEG" alt="" onclick="openModal(this)">
+      <div class="box4">
+        <img src="../Bilder/mine bilder/fjell.JPEG" alt="Fjell">
       </div>
-      <div class="box">
-        <h2></h2>
-        <img src="../Bilder/mine bilder/fyrtorn.JPEG" alt="" onclick="openModal(this)">
+      <div class="box4">
+        <img src="../Bilder/mine bilder/fyrtorn.JPEG" alt="Fyrtårn">
       </div>
-      <div class="box">
-        <h2></h2>
-        <img src="../Bilder/mine bilder/liten blomst.JPEG" alt="" onclick="openModal(this)">
+      <div class="box4">
+        <img src="../Bilder/mine bilder/liten blomst.JPEG" alt="Liten Blomst">
       </div>
-      <div class="box">
-        <h2></h2>
-        <img src="../Bilder/mine bilder/rød blomst.JPEG" alt="5" onclick="openModal(this)">
+      <div class="box4">
+        <img src="../Bilder/mine bilder/rød blomst.JPEG" alt="Rød Blomst">
       </div>
-      <div class="box">
-        <h2></h2>
-        <img src="../Bilder/mine bilder/tre.JPEG" alt="6" onclick="openModal(this)">
+      <div class="box4">
+        <img src="../Bilder/mine bilder/tre.JPEG" alt="Tre">
       </div>
     </div>
-  </div>
-
-  <!-- Modal -->
+ 
   <div id="myModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="img01">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01" alt="Utvidet bildevisning">
   </div>
 
-  <footer>
-  </footer>
-
-  <script>
-    function openModal(element) {
-      var modal = document.getElementById("myModal");
-      var modalImg = document.getElementById("img01");
-      modal.style.display = "block";
-      modalImg.src = element.src;
-    }
-
-    function closeModal() {
-      var modal = document.getElementById("myModal");
-      modal.style.display = "none";
-    }
-  </script>
+  <script src="../javaskript/prosjekt.js"></script>
 </body>
 </html>

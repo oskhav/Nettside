@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Oskar Nygård Havre</title>
-  <link rel="stylesheet" href="../CSS/opk.css">
+  <link rel="stylesheet" href="../CSS/test.css">
 </head>
 <body>
   <header>
@@ -16,49 +16,31 @@
       </ul>
     </nav>
   </header>
+  
   <h1>Prosjekter</h1>
-  <div class="content2">
-    <div class="grid2">
-      <div class="box2">
-        <h2>1</h2>
-        <img src="../Bilder/1.jpg" alt="1" onclick="openModal(this)">
-      </div>
-      <div class="box">
-        <h2>2</h2>
-        <img src="../Bilder/2.jpg" alt="2" onclick="openModal(this)">
-      </div>
-      <div class="box">
-        <h2>3</h2>
-        <img src="../Bilder/3.jpg" alt="3" onclick="openModal(this)">
-      </div>
-      <div class="box">
-        <h2>4</h2>
-        <img src="../Bilder/4.jpg" alt="4" onclick="openModal(this)">
-      </div>
+  <div class="grid4">
+    <div class="box4">
+      <img src="../Bilder/1.jpg" alt="Blomst">
     </div>
+    <div class="box4">
+      <img src="../Bilder/2.jpg" alt="Fjell">
+    </div>
+    <div class="box4">
+      <img src="../Bilder/3.jpg" alt="Fyrtårn">
+    </div>
+    <div class="box4">
+      <img src="../Bilder/4.jpg" alt="Liten Blomst">
+    </div>
+  
   </div>
 
-  <!-- Modal -->
-  <div id="myModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="img01">
-  </div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01" alt="Utvidet bildevisning">
+</div>
 
-  <footer>
-  </footer>
-
-  <script>
-    function openModal(element) {
-      var modal = document.getElementById("myModal");
-      var modalImg = document.getElementById("img01");
-      modal.style.display = "block";
-      modalImg.src = element.src;
-    }
-
-    function closeModal() {
-      var modal = document.getElementById("myModal");
-      modal.style.display = "none";
-    }
-  </script>
+<script src="../javaskript/prosjekt.js"></script>
+</body>
+</html>
 </body>
 </html>
