@@ -55,14 +55,6 @@ main h1 {
   margin: 0 auto;
 }
 
-.box4 {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
 
 .box4 img {
   width: 100%;
