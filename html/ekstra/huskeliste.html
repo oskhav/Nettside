@@ -1,19 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="test.js" defer></script>
+    <title>Hangman with Game Over Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        #word-display {
+            font-size: 24px;
+            letter-spacing: 5px;
+            color: #007acc;
+        }
+        #hangman-canvas {
+            border: 2px solid #333;
+            background-color: #fff;
+            margin: 20px auto;
+            display: block;
+        }
+        #message {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #d9534f;
+        }
+        button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #005f99;
+        }
+        #guess-input {
+            font-size: 16px;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        /* Game Over Overlay */
+        #game-over-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #game-over-text {
+            font-size: 60px;
+            color: red;
+            font-weight: bold;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
- 
 <body>
-    <input type="text" id="taskInput" placeholder="Enter new task">
-    <button id="addTaskButton">Add Task</button>
-    <button id="removeTaskButton">Remove Task</button>
-    <ul id="taskList"></ul>
- 
+    <h1>Hangman Game</h1>
+    <canvas id="hangman-canvas" width="200" height="250"></canvas>
+    <div id="word-display">_ _ _ _ _</div>
+    <input type="text" id="guess-input" maxlength="1" placeholder="Enter a letter">
+    <button id="submit-button">Guess</button>
+    <p id="message"></p>
+
+    <!-- Game Over Overlay -->
+    <div id="game-over-overlay">
+        <h1 id="game-over-text">GAME OVER</h1>
+    </div>
+
+    <script src="../../javaskript/hallo.js"></script>
 </body>
- 
 </html>
