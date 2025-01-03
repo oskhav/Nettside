@@ -3,90 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman with Game Over Effect</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        #word-display {
-            font-size: 24px;
-            letter-spacing: 5px;
-            color: #007acc;
-        }
-        #hangman-canvas {
-            border: 2px solid #333;
-            background-color: #fff;
-            margin: 20px auto;
-            display: block;
-        }
-        #message {
-            font-size: 18px;
-            margin-top: 10px;
-            color: #d9534f;
-        }
-        button {
-            background-color: #007acc;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #005f99;
-        }
-        #guess-input {
-            font-size: 16px;
-            padding: 5px;
-            margin: 10px;
-        }
-
-        /* Game Over Overlay */
-        #game-over-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        #game-over-text {
-            font-size: 60px;
-            color: red;
-            font-weight: bold;
-            animation: blink 1s infinite;
-        }
-        @keyframes blink {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
-        }
-    </style>
+    <title>Tetris</title>
+    <link rel="stylesheet" href="tetris.css">
 </head>
 <body>
-    <h1>Hangman Game</h1>
-    <canvas id="hangman-canvas" width="200" height="250"></canvas>
-    <div id="word-display">_ _ _ _ _</div>
-    <input type="text" id="guess-input" maxlength="1" placeholder="Enter a letter">
-    <button id="submit-button">Guess</button>
-    <p id="message"></p>
-
-    <!-- Game Over Overlay -->
-    <div id="game-over-overlay">
-        <h1 id="game-over-text">GAME OVER</h1>
+    <div class="start-screen" id="startScreen">
+        <h1>Velkommen til Tetris</h1>
+        <button onclick="startGame()">Start Spill</button>
     </div>
 
-    <script src="../../javaskript/hallo.js"></script>
+    <div class="container" id="gameContainer">
+        <header>
+            <h1>Tetris</h1>
+            <p>Bruk piltastene for å spille (opp for å snu blokken)</p>
+        </header>
+        <main>
+            <canvas id="tetris" width="240" height="400"></canvas>
+            <aside>
+                <h2>Poeng: <span id="score">0</span></h2>
+                <h2>Nivå: <span id="level">1</span></h2>
+                <h2>Linjer: <span id="lines">0</span></h2>
+                <button class="restart-btn" onclick="restartGame()">Start på nytt</button>
+            </aside>
+        </main>
+    </div>
+
+    <div class="game-over" id="gameOverScreen">
+        <h1>Game Over</h1>
+        <button onclick="restartGame()">Start på nytt</button>
+    </div>
+
+    <script src="tetris.js"></script>
 </body>
 </html>
