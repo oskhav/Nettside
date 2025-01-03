@@ -1,34 +1,23 @@
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
-const scoreElement = document.getElementById('score');
-const levelElement = document.getElementById('level');
-const linesElement = document.getElementById('lines');
-const startScreen = document.getElementById('startScreen');
-const gameContainer = document.getElementById('gameContainer');
-const gameOverScreen = document.getElementById('gameOverScreen');
-
 context.scale(20, 20);
 
 // Fargekart for blokkene
 const colors = [
-    null,
-    '#f39c12',
-    '#2ecc71',
-    '#3498db',
-    '#9b59b6',
-    '#e74c3c',
-    '#f1c40f',
-    '#e67e22',
+    null,        // Ingen blokk
+    '#f39c12',   // T-blokk
+    '#2ecc71',   // O-blokk
+    '#3498db',   // L-blokk
+    '#9b59b6',   // J-blokk
+    '#e74c3c',   // I-blokk
+    '#f1c40f',   // S-blokk
+    '#e67e22',   // Z-blokk
 ];
 
-const points = [0, 40, 100, 300, 1200];
 let arena = createMatrix(12, 20);
 let player = {
     pos: { x: 0, y: 0 },
     matrix: null,
-    score: 0,
-    lines: 0,
-    level: 1,
 };
 
 let dropCounter = 0;
@@ -53,19 +42,6 @@ function createPiece(type) {
     if (type === 'Z') return [[7, 7, 0], [0, 7, 7], [0, 0, 0]];
 }
 
-function calculateDropInterval(level) {
-    return Math.max(1000 - (level - 1) * 100, 100); // Minimum hastighet: 100ms
-}
-
-function updateScore() {
-    scoreElement.innerText = player.score;
-    linesElement.innerText = player.lines;
-    levelElement.innerText = player.level;
-
-    player.level = Math.min(Math.floor(player.lines / 10) + 1, 10); // Maks nivå: 10
-    dropInterval = calculateDropInterval(player.level);
-}
-
 function drawMatrix(matrix, offset) {
     matrix.forEach((row, y) => {
         row.forEach((value, x) => {
@@ -77,21 +53,10 @@ function drawMatrix(matrix, offset) {
     });
 }
 
-function drawGrid() {
-    context.lineWidth = 0.05;
-    context.strokeStyle = '#7f8c8d';
-    for (let x = 0; x < canvas.width / 20; x++) {
-        for (let y = 0; y < canvas.height / 20; y++) {
-            context.strokeRect(x, y, 1, 1);
-        }
-    }
-}
-
 function draw() {
     context.fillStyle = '#34495e';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    drawGrid(); // Tegn rutenett
     drawMatrix(arena, { x: 0, y: 0 });
     drawMatrix(player.matrix, player.pos);
 }
@@ -110,29 +75,18 @@ function collide(arena, player) {
     const [m, o] = [player.matrix, player.pos];
     for (let y = 0; y < m.length; ++y) {
         for (let x = 0; x < m[y].length; ++x) {
-            if (
-                m[y][x] !== 0 &&
-                (arena[y + o.y] && arena[y + o.y][x + o.x]) !== 0
-            ) {
-                return true;
+            if (m[y][x] !== 0) {
+                if (
+                    o.y + y < 0 || o.y + y >= arena.length || // out of vertical bounds
+                    o.x + x < 0 || o.x + x >= arena[0].length || // out of horizontal bounds
+                    arena[o.y + y] && arena[o.y + y][o.x + x] !== 0 // block collision
+                ) {
+                    return true;
+                }
             }
         }
     }
     return false;
-}
-
-function arenaSweep() {
-    let rowCount = 1;
-    for (let y = arena.length - 1; y >= 0; --y) {
-        if (arena[y].every(value => value !== 0)) {
-            arena.splice(y, 1);
-            arena.unshift(new Array(arena[0].length).fill(0));
-            player.score += points[rowCount];
-            player.lines += rowCount;
-            rowCount++;
-        }
-    }
-    updateScore();
 }
 
 function playerDrop() {
@@ -140,7 +94,6 @@ function playerDrop() {
     if (collide(arena, player)) {
         player.pos.y--;
         merge(arena, player);
-        arenaSweep();
         playerReset();
     }
     dropCounter = 0;
@@ -149,7 +102,7 @@ function playerDrop() {
 function playerMove(offset) {
     player.pos.x += offset;
     if (collide(arena, player)) {
-        player.pos.x -= offset;
+        player.pos.x -= offset;  // Undo the move if collision occurs (no-clipping prevented)
     }
 }
 
@@ -160,46 +113,19 @@ function playerReset() {
     player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
 
     if (collide(arena, player)) {
-        showGameOver();
+        gameOver();
     }
 }
 
-function showGameOver() {
-    gameOverScreen.style.display = 'block';
+function gameOver() {
+    alert('Game Over');
+    resetGame();
 }
 
-function startGame() {
-    startScreen.style.display = 'none';
-    gameContainer.style.display = 'flex';
-    playerReset();
-    updateScore();
-    update();
-}
-
-function restartGame() {
-    gameOverScreen.style.display = 'none';
+function resetGame() {
     arena = createMatrix(12, 20);
-    player.score = 0;
-    player.lines = 0;
-    player.level = 1;
-    dropInterval = calculateDropInterval(player.level);
-    playerReset();
-    updateScore();
-}
-
-function rotate(matrix, dir) {
-    const rotated = matrix.map((_, i) => matrix.map(row => row[i]));
-    if (dir > 0) {
-        rotated.forEach(row => row.reverse());
-    } else {
-        rotated.reverse();
-    }
-    player.matrix = rotated;
-    if (collide(arena, player)) {
-        rotated.forEach(row => row.reverse());
-        if (dir > 0) rotated.reverse();
-        else rotated.reverse();
-    }
+    player.pos = { x: 0, y: 0 };
+    player.matrix = null;
 }
 
 function update(time = 0) {
@@ -217,12 +143,29 @@ function update(time = 0) {
 
 document.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft') {
-        playerMove(-1);
+        playerMove(-1); // Move left
     } else if (event.key === 'ArrowRight') {
-        playerMove(1);
+        playerMove(1);  // Move right
     } else if (event.key === 'ArrowDown') {
-        playerDrop();
+        playerDrop();  // Drop block down
     } else if (event.key === 'ArrowUp') {
-        rotate(player.matrix, 1);
+        rotate(player.matrix, 1);  // Rotate block
     }
 });
+
+function rotate(matrix, dir) {
+    const rotated = matrix.map((_, i) => matrix.map(row => row[i]));
+    if (dir > 0) {
+        rotated.forEach(row => row.reverse());
+    } else {
+        rotated.reverse();
+    }
+    player.matrix = rotated;
+    if (collide(arena, player)) {
+        rotated.forEach(row => row.reverse());
+        if (dir > 0) rotated.reverse();
+        else rotated.reverse();
+    }
+}
+
+update();
