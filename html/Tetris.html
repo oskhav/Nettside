@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oskar Nygår HavreS</title>
+  <link rel="stylesheet" href="../CSS/test.css">
+  <link rel="stylesheet" href="../CSS/Tetris.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Hjem</a></li>
+        <li><a href="Om.html">Om</a></li>
+        <li><a href="Prosjekter.html">Prosjekter</a></li>
+        <li><a href="Tetris.html">Tetris</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+        <li><a href="log.html">Dokumentasjon</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="start-screen" id="startScreen">
+      <h1>Velkommen til Tetris</h1>
+      <button onclick="startGame()">Start Spill</button>
+  </div>
+
+  <div class="container" id="gameContainer">
+      <header>
+          <h8>Tetris</h8>
+        
+      </header>
+      <main>
+          <canvas id="tetris" width="240" height="400"></canvas>
+          <aside>
+              <h2>Poeng: <span id="score">0</span></h2>
+              <h2>Nivå: <span id="level">1</span></h2>
+              <h2>Linjer: <span id="lines">0</span></h2>
+              <button class="restart-btn" onclick="restartGame()">Start på nytt</button>
+          </aside>
+      </main>
+  </div>
+
+  <div class="game-over" id="gameOverScreen">
+      <h1>Game Over</h1>
+      <button onclick="restartGame()">Start på nytt</button>
+  </div>
+
+  <script src="../javaskript/Tetris.js"></script>
+</body>
+</html>
