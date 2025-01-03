@@ -11,14 +11,14 @@ context.scale(20, 20);
 
 // Fargekart for blokkene
 const colors = [
-    null,        // Ingen blokk
-    '#f39c12',   // T-blokk
-    '#2ecc71',   // O-blokk
-    '#3498db',   // L-blokk
-    '#9b59b6',   // J-blokk
-    '#e74c3c',   // I-blokk
-    '#f1c40f',   // S-blokk
-    '#e67e22',   // Z-blokk
+    null,
+    '#f39c12',
+    '#2ecc71',
+    '#3498db',
+    '#9b59b6',
+    '#e74c3c',
+    '#f1c40f',
+    '#e67e22',
 ];
 
 const points = [0, 40, 100, 300, 1200];
@@ -51,6 +51,19 @@ function createPiece(type) {
     if (type === 'I') return [[0, 0, 0, 0], [5, 5, 5, 5], [0, 0, 0, 0]];
     if (type === 'S') return [[0, 6, 6], [6, 6, 0], [0, 0, 0]];
     if (type === 'Z') return [[7, 7, 0], [0, 7, 7], [0, 0, 0]];
+}
+
+function calculateDropInterval(level) {
+    return Math.max(1000 - (level - 1) * 100, 100); // Minimum hastighet: 100ms
+}
+
+function updateScore() {
+    scoreElement.innerText = player.score;
+    linesElement.innerText = player.lines;
+    levelElement.innerText = player.level;
+
+    player.level = Math.min(Math.floor(player.lines / 10) + 1, 10); // Maks nivå: 10
+    dropInterval = calculateDropInterval(player.level);
 }
 
 function drawMatrix(matrix, offset) {
@@ -151,15 +164,6 @@ function playerReset() {
     }
 }
 
-function updateScore() {
-    scoreElement.innerText = player.score;
-    linesElement.innerText = player.lines;
-    levelElement.innerText = player.level;
-
-    player.level = Math.floor(player.lines / 10) + 1;
-    dropInterval = 1000 - (player.level - 1) * 100;
-}
-
 function showGameOver() {
     gameOverScreen.style.display = 'block';
 }
@@ -178,6 +182,7 @@ function restartGame() {
     player.score = 0;
     player.lines = 0;
     player.level = 1;
+    dropInterval = calculateDropInterval(player.level);
     playerReset();
     updateScore();
 }
