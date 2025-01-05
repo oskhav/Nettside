@@ -1,133 +1,116 @@
 /* ======= RESET STYLES ======= */
-/* Setter grunnleggende stiler for alle elementer for å sikre enhetlighet */
 * {
-  margin: 0; /* Fjerner standard marger */
-  padding: 0; /* Fjerner standard padding */
-  box-sizing: border-box; /* Inkluder padding og border i elementstørrelse */
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Setter standard font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* ======= HEADER ======= */
-/* Stiler for toppen av siden (header med navigasjon) */
 header {
-  background-color: black; /* Svart bakgrunnsfarge */
-  color: white; /* Hvit tekstfarge */
-  padding: 20px; /* Innsidemargin rundt innholdet */
-  display: flex; /* Bruker flexbox for justering */
-  justify-content: center; /* Sentrerer navigasjonsmenyen horisontalt */
-  align-items: center; /* Sentrerer innholdet vertikalt */
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Navigasjonsmenyen */
 header nav ul {
-  display: flex; /* Viser listen horisontalt */
-  list-style: none; /* Fjerner standard punktliste-stil */
-  gap: 15px; /* Avstand mellom hver lenke */
+  display: flex;
+  list-style: none;
+  gap: 15px;
 }
 
 header nav ul li a {
-  color: white; /* Tekstfarge */
-  text-decoration: none; /* Fjerner understrek */
-  font-size: 18px; /* Skriftstørrelse */
-  padding: 5px 10px; /* Litt innvendig marg for klikkbarhet */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Glatte overganger */
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  transition: 0.3s ease;
 }
 
-/* Hover-effekt for navigasjonslenker */
 header nav ul li a:hover {
-  background-color: white; /* Hvit bakgrunn ved hover */
-  color: black; /* Svart tekst ved hover */
-  border-radius: 5px; /* Runde hjørner på lenken */
+  background-color: white;
+  color: black;
+  border-radius: 5px;
 }
 
 /* ======= HERO SECTION ======= */
-/* Seksjonen øverst på siden med bakgrunnsbilde */
 .hero {
-  background: url("../Bilder/IMG_4271.jpg"); /* Bakgrunnsbilde */
-  background-size: cover; /* Gjør bildet responsivt */
-  background-position: center; /* Plasser bildet sentralt */
-  background-repeat: no-repeat; /* Ingen repetisjon av bildet */
-  color: aliceblue; /* Lyseblå tekstfarge */
-  height: 100vh; /* Høyde tilsvarer hele vinduet */
-  display: flex; /* Bruker flexbox for å sentrere innhold */
-  justify-content: center; /* Sentrerer horisontalt */
-  align-items: center; /* Sentrerer vertikalt */
-  text-align: center; /* Sentrerer tekst */
+  background: url("../Bilder/IMG_4271.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: aliceblue;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* Titteltekst i hero-seksjonen */
 .content h1 {
-  font-size: 4em; /* Stor skrifttype for tittel */
-  margin-bottom: 300px; /* Litt avstand under tittelen */
+  font-size: 4em;
+  margin-bottom: 300px;
 }
 
-/* Undertittel i hero-seksjonen */
 .hero .content .hero-subtitle {
-  font-size: 1.5em; /* Mindre skrifttype for undertittel */
-  margin-top: 10px; /* Litt avstand over undertittelen */
-  color: #ccc; /* Lys grå tekstfarge */
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #ccc;
 }
 
-/* Pil-animasjon for å oppfordre brukeren til å bla ned */
 .scroll-down {
-  position: absolute; /* Plassering relativ til nærmeste posisjonerte element */
-  bottom: 20px; /* Plasserer pilen 20px fra bunnen */
-  left: 50%; /* Sentrerer pilen horisontalt */
-  transform: translateX(-50%); /* Justerer slik at pilens sentrum er riktig */
-  width: 30px; /* Bredde på pilen */
-  height: 30px; /* Høyde på pilen */
-  border: solid aliceblue; /* Lyseblå kantfarge */
-  border-width: 0 3px 3px 0; /* Gjør pilen trekantformet */
-  transform: rotate(45deg); /* Roterer pilen */
-  animation: bounce 1.5s infinite; /* Gjør pilen hoppende */
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border: solid aliceblue;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  animation: bounce 1.5s infinite;
 }
 
-/* Bounce-animasjon for pilen */
 @keyframes bounce {
   0%, 100% {
-    transform: rotate(45deg) translateY(0); /* Ingen vertikal bevegelse */
+    transform: rotate(45deg) translateY(0);
   }
   50% {
-    transform: rotate(45deg) translateY(10px); /* Hopper 10px opp */
+    transform: rotate(45deg) translateY(10px);
   }
 }
 
 /* ======= TEXT SECTION ======= */
-/* Seksjon med tekst og bilde */
 .text-section {
-  padding: 40px 20px; /* Marg rundt innholdet */
-  background-color: #f4f4f4; /* Lys grå bakgrunn */
-  color: #333; /* Mørk grå tekstfarge */
-  display: flex; /* Flexbox for oppsett */
-  flex-direction: column; /* Stabler innhold vertikalt */
-  align-items: center; /* Sentrerer innhold horisontalt */
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Overskrift i tekstseksjonen */
 .text-section h2 {
-  font-size: 2em; /* Stor skrifttype for overskrift */
-  margin-bottom: 20px; /* Litt avstand under overskriften */
-  text-align: center; /* Sentrert tekst */
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Tekstinnhold i tekstseksjonen */
 .text-section p {
-  font-size: 1.2em; /* Litt større skrifttype */
-  line-height: 1.6; /* Linjeavstand for lesbarhet */
-  max-width: 800px; /* Begrensning av tekstbredden */
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 800px;
 }
 
-/* Bilder i tekstseksjonen */
 .text-section img {
-  float: left; /* Plasserer bildet til venstre for teksten */
-  margin-right: 20px; /* Litt avstand mellom bilde og tekst */
-  max-width: 50%; /* Bildet tar maks 50% av bredden */
-  border-radius: 0; /* Fjernet runde hjørner */
+  float: left;
+  margin-right: 20px;
+  max-width: 50%;
+  border-radius: 0;
 }
-
-
-
-
 
 /* OM */
 .text-section2 {
@@ -154,17 +137,14 @@ header nav ul li a:hover {
   text-align: left;
 }
 
-/* Bildejustering */
 .text-section2 img {
   width: 100%;
   max-width: 400px;
   height: auto;
   object-fit: cover;
-  border-radius: 0; /* Fjernet runde hjørner */
   margin-right: 20px;
 }
 
-/* Flexbox for tekst og bilde */
 .content2 {
   display: flex;
   align-items: flex-start;
@@ -173,7 +153,6 @@ header nav ul li a:hover {
   margin: 0 auto 40px;
 }
 
-/* RESPONSIV DESIGN */
 @media (max-width: 768px) {
   .content2 {
     flex-direction: column;
@@ -186,34 +165,27 @@ header nav ul li a:hover {
   }
 }
 
-
-
-
-
-
-
 /* Prosjet */
-
 .grid3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin: 20px auto;
   max-width: 1200px;
 }
 
 .box3 {
-  height: 300px; /* Fast høyde for boksene */
-  background-size: cover; /* Bildet fyller boksen */
-  background-position: center; /* Sentrerer bildet */
-  background-repeat: no-repeat; /* Ingen repetisjon */
-  border-radius: 0; /* Fjernet runde hjørner */
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
   overflow: hidden;
   position: relative;
 }
 
 .overlay3 {
-  background-color: rgba(0, 0, 0, 0.5); /* Halvtransparent overlegg */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   position: absolute;
   bottom: 0;
@@ -226,7 +198,7 @@ header nav ul li a:hover {
 }
 
 .box3:hover .overlay3 {
-  opacity: 1; /* Synlig ved hover */
+  opacity: 1;
 }
 
 .box3 a {
@@ -238,14 +210,7 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
-
-
-
-
-
-
 /* kontakt */
-
 .content5 {
   padding: 20px;
   text-align: center;
@@ -306,9 +271,7 @@ header nav ul li a:hover {
   background-color: #005fa3;
 }
 
-
 /*Mine bilder*/
-
 .grid4 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -317,7 +280,6 @@ header nav ul li a:hover {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 
 .box4 img {
   width: 100%;
@@ -362,10 +324,6 @@ header nav ul li a:hover {
   cursor: pointer;
 }
 
-
-
-
-
 /* logg */
 .content {
   padding: 20px;
@@ -405,7 +363,6 @@ table img.table-img {
   object-fit: cover;
 }
 
-/* RESPONSIV DESIGN */
 @media (max-width: 768px) {
   table img.table-img {
     max-width: 100px;
@@ -413,15 +370,13 @@ table img.table-img {
 }
 
 /*Tetris*/
-
-/* Gjør menyen fast på toppen med svart bakgrunn */
 header nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: black; /* Svart bakgrunn */
-  color: #ecf0f1;
+  background-color: rgb(0, 0, 0);
+  color: #000000;
   padding: 10px 0;
   z-index: 1000;
 }
@@ -434,19 +389,3 @@ header nav ul {
   justify-content: center;
   gap: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

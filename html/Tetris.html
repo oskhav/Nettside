@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="no">
 <head>
-  <title>Oskar Nygår HavreS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
   <link rel="stylesheet" href="../CSS/test.css">
   <link rel="stylesheet" href="../CSS/Tetris.css">
 </head>
@@ -19,16 +21,14 @@
     </nav>
   </header>
 
+  <!-- Startskjerm -->
   <div class="start-screen" id="startScreen">
       <h1>Velkommen til Tetris</h1>
       <button onclick="startGame()">Start Spill</button>
   </div>
 
+  <!-- Spillkontainer -->
   <div class="container" id="gameContainer">
-
-          <h3>Tetris</h3>
-        
-     
       <main>
           <canvas id="tetris" width="240" height="400"></canvas>
           <aside>
@@ -40,6 +40,7 @@
       </main>
   </div>
 
+  <!-- Game Over-skjerm -->
   <div class="game-over" id="gameOverScreen">
       <h1>Game Over</h1>
       <button onclick="restartGame()">Start på nytt</button>
