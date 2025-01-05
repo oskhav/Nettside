@@ -4,14 +4,14 @@ context.scale(20, 20);
 
 // Fargekart for blokkene
 const colors = [
-    null,        // Ingen blokk
-    '#f39c12',   // T-blokk
-    '#2ecc71',   // O-blokk
-    '#3498db',   // L-blokk
-    '#9b59b6',   // J-blokk
-    '#e74c3c',   // I-blokk
-    '#f1c40f',   // S-blokk
-    '#e67e22',   // Z-blokk
+    null,
+    '#f39c12',
+    '#2ecc71',
+    '#3498db',
+    '#9b59b6',
+    '#e74c3c',
+    '#f1c40f',
+    '#e67e22',
 ];
 
 let arena = createMatrix(12, 20);
@@ -23,6 +23,10 @@ let player = {
 let dropCounter = 0;
 let dropInterval = 1000;
 let lastTime = 0;
+
+const startScreen = document.getElementById('startScreen');
+const gameContainer = document.getElementById('gameContainer');
+const gameOverScreen = document.getElementById('gameOverScreen');
 
 function createMatrix(width, height) {
     const matrix = [];
@@ -77,9 +81,9 @@ function collide(arena, player) {
         for (let x = 0; x < m[y].length; ++x) {
             if (m[y][x] !== 0) {
                 if (
-                    o.y + y < 0 || o.y + y >= arena.length || // out of vertical bounds
-                    o.x + x < 0 || o.x + x >= arena[0].length || // out of horizontal bounds
-                    arena[o.y + y] && arena[o.y + y][o.x + x] !== 0 // block collision
+                    o.y + y < 0 || o.y + y >= arena.length || 
+                    o.x + x < 0 || o.x + x >= arena[0].length || 
+                    arena[o.y + y] && arena[o.y + y][o.x + x] !== 0
                 ) {
                     return true;
                 }
@@ -102,7 +106,7 @@ function playerDrop() {
 function playerMove(offset) {
     player.pos.x += offset;
     if (collide(arena, player)) {
-        player.pos.x -= offset;  // Undo the move if collision occurs (no-clipping prevented)
+        player.pos.x -= offset;
     }
 }
 
@@ -118,14 +122,20 @@ function playerReset() {
 }
 
 function gameOver() {
-    alert('Game Over');
-    resetGame();
+    gameContainer.style.display = 'none';
+    gameOverScreen.style.display = 'block';
 }
 
-function resetGame() {
+function startGame() {
+    startScreen.style.display = 'none';
+    gameOverScreen.style.display = 'none';
+    gameContainer.style.display = 'flex';
+
     arena = createMatrix(12, 20);
-    player.pos = { x: 0, y: 0 };
-    player.matrix = null;
+    playerReset();
+    lastTime = 0;
+    dropCounter = 0;
+    update();
 }
 
 function update(time = 0) {
@@ -143,13 +153,13 @@ function update(time = 0) {
 
 document.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft') {
-        playerMove(-1); // Move left
+        playerMove(-1);
     } else if (event.key === 'ArrowRight') {
-        playerMove(1);  // Move right
+        playerMove(1);
     } else if (event.key === 'ArrowDown') {
-        playerDrop();  // Drop block down
+        playerDrop();
     } else if (event.key === 'ArrowUp') {
-        rotate(player.matrix, 1);  // Rotate block
+        rotate(player.matrix, 1);
     }
 });
 
@@ -167,5 +177,3 @@ function rotate(matrix, dir) {
         else rotated.reverse();
     }
 }
-
-update();

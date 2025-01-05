@@ -1,53 +1,126 @@
 /* ======= RESET STYLES ======= */
+/* Setter grunnleggende stiler for alle elementer for å sikre enhetlighet */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Gill Sans', sans-serif;
+  margin: 0; /* Fjerner standard marger */
+  padding: 0; /* Fjerner standard padding */
+  box-sizing: border-box; /* Inkluder padding og border i elementstørrelse */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Setter standard font */
 }
 
-/* ======= MAIN CONTENT ======= */
-.content {
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+/* ======= HEADER ======= */
+/* Stiler for toppen av siden (header med navigasjon) */
+header {
+  background-color: black; /* Svart bakgrunnsfarge */
+  color: white; /* Hvit tekstfarge */
+  padding: 20px; /* Innsidemargin rundt innholdet */
+  display: flex; /* Bruker flexbox for justering */
+  justify-content: center; /* Sentrerer navigasjonsmenyen horisontalt */
+  align-items: center; /* Sentrerer innholdet vertikalt */
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
+/* Navigasjonsmenyen */
+header nav ul {
+  display: flex; /* Viser listen horisontalt */
+  list-style: none; /* Fjerner standard punktliste-stil */
+  gap: 15px; /* Avstand mellom hver lenke */
 }
 
-/* ======= TABLE ======= */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+header nav ul li a {
+  color: white; /* Tekstfarge */
+  text-decoration: none; /* Fjerner understrek */
+  font-size: 18px; /* Skriftstørrelse */
+  padding: 5px 10px; /* Litt innvendig marg for klikkbarhet */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Glatte overganger */
 }
 
-table th, table td {
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: left;
-  vertical-align: middle;
+/* Hover-effekt for navigasjonslenker */
+header nav ul li a:hover {
+  background-color: white; /* Hvit bakgrunn ved hover */
+  color: black; /* Svart tekst ved hover */
+  border-radius: 5px; /* Runde hjørner på lenken */
 }
 
-table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
+/* ======= HERO SECTION ======= */
+/* Seksjonen øverst på siden med bakgrunnsbilde */
+.hero {
+  background: url("../Bilder/IMG_4271.jpg"); /* Bakgrunnsbilde */
+  background-size: cover; /* Gjør bildet responsivt */
+  background-position: center; /* Plasser bildet sentralt */
+  background-repeat: no-repeat; /* Ingen repetisjon av bildet */
+  color: aliceblue; /* Lyseblå tekstfarge */
+  height: 100vh; /* Høyde tilsvarer hele vinduet */
+  display: flex; /* Bruker flexbox for å sentrere innhold */
+  justify-content: center; /* Sentrerer horisontalt */
+  align-items: center; /* Sentrerer vertikalt */
+  text-align: center; /* Sentrerer tekst */
 }
 
-table img.table-img {
-  width: 100%;
-  max-width: 150px;
-  height: auto;
-  border-radius: 5px;
-  object-fit: cover;
+/* Titteltekst i hero-seksjonen */
+.content h1 {
+  font-size: 4em; /* Stor skrifttype for tittel */
+  margin-bottom: 300px; /* Litt avstand under tittelen */
 }
 
-/* RESPONSIV DESIGN */
-@media (max-width: 768px) {
-  table img.table-img {
-    max-width: 100px;
+/* Undertittel i hero-seksjonen */
+.hero .content .hero-subtitle {
+  font-size: 1.5em; /* Mindre skrifttype for undertittel */
+  margin-top: 10px; /* Litt avstand over undertittelen */
+  color: #ccc; /* Lys grå tekstfarge */
+}
+
+/* Pil-animasjon for å oppfordre brukeren til å bla ned */
+.scroll-down {
+  position: absolute; /* Plassering relativ til nærmeste posisjonerte element */
+  bottom: 20px; /* Plasserer pilen 20px fra bunnen */
+  left: 50%; /* Sentrerer pilen horisontalt */
+  transform: translateX(-50%); /* Justerer slik at pilens sentrum er riktig */
+  width: 30px; /* Bredde på pilen */
+  height: 30px; /* Høyde på pilen */
+  border: solid aliceblue; /* Lyseblå kantfarge */
+  border-width: 0 3px 3px 0; /* Gjør pilen trekantformet */
+  transform: rotate(45deg); /* Roterer pilen */
+  animation: bounce 1.5s infinite; /* Gjør pilen hoppende */
+}
+
+/* Bounce-animasjon for pilen */
+@keyframes bounce {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0); /* Ingen vertikal bevegelse */
   }
+  50% {
+    transform: rotate(45deg) translateY(10px); /* Hopper 10px opp */
+  }
+}
+
+/* ======= TEXT SECTION ======= */
+/* Seksjon med tekst og bilde */
+.text-section {
+  padding: 40px 20px; /* Marg rundt innholdet */
+  background-color: #f4f4f4; /* Lys grå bakgrunn */
+  color: #333; /* Mørk grå tekstfarge */
+  display: flex; /* Flexbox for oppsett */
+  flex-direction: column; /* Stabler innhold vertikalt */
+  align-items: center; /* Sentrerer innhold horisontalt */
+}
+
+/* Overskrift i tekstseksjonen */
+.text-section h2 {
+  font-size: 2em; /* Stor skrifttype for overskrift */
+  margin-bottom: 20px; /* Litt avstand under overskriften */
+  text-align: center; /* Sentrert tekst */
+}
+
+/* Tekstinnhold i tekstseksjonen */
+.text-section p {
+  font-size: 1.2em; /* Litt større skrifttype */
+  line-height: 1.6; /* Linjeavstand for lesbarhet */
+  max-width: 800px; /* Begrensning av tekstbredden */
+}
+
+/* Bilder i tekstseksjonen */
+.text-section img {
+  float: left; /* Plasserer bildet til venstre for teksten */
+  margin-right: 20px; /* Litt avstand mellom bilde og tekst */
+  max-width: 50%; /* Bildet tar maks 50% av bredden */
+  border-radius: 0; /* Fjernet runde hjørner */
 }
