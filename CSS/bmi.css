@@ -59,9 +59,3 @@ button:hover {
   background: linear-gradient(145deg, #003c8f, #1565c0);
 }
 
-p#result {
-  font-weight: bold;
-  margin-top: 20px;
-  font-size: 18px;
-  color: #0d47a1;
-}
