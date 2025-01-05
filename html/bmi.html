@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
-  <title>Simple BMI Calculator</title>
-  <link rel="stylesheet" href="../CSS/bmi.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oskar Nygår Havre</title>
+  <link rel="stylesheet" href="../CSS/test.css"> <!--link til css-->
 </head>
 <body>
-  <h1>Simple BMI Calculator</h1>
-  <label for="weight">Weight (kg):</label>
-  <input type="number" id="weight" required>
-  <br>
-  <label for="height">Height (cm):</label>
-  <input type="number" id="height" required>
-  <br>
-  <button onclick="calculateBMI()">Calculate BMI</button>
-  <p id="result"></p>
+
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Hjem</a></li>
+        <li><a href="Om.html">Om</a></li>
+        <li><a href="Prosjekter.html">Prosjekter</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+        <li><a href="log.html">Dokumentasjon</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="bmi-container">
+    <h1>BMI Kalkulator</h1>
+    <div class="container">
+      <label for="weight">Vekt (kg):</label>
+      <input type="number" id="weight" placeholder="Skriv inn vekten" />
+      
+      <label for="height">Høyde (cm):</label>
+      <input type="number" id="height" placeholder="Skriv inn høyden" />
+      
+      <button onclick="calculateBMI()">Beregn BMI</button>
+      
+      <p id="result"></p>
+    </div>
+  </div>
 
   <script src="../javaskript/bmi.js"></script>
 </body>
