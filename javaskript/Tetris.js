@@ -213,7 +213,7 @@ document.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft') player.pos.x -= 1;  // Venstre pil
     if (event.key === 'ArrowRight') player.pos.x += 1;  // Høyre pil
     if (event.key === 'ArrowDown') playerDrop();  // Ned pil (faller raskt)
-    if (event.key === 'ArrowUp') playerRotate(1);  // Opp pil (roter med klokken)
+    if (event.key === 'ArrowUp') (1);  // Opp pil (roter med klokken)
 
     // Unngå kollisjon etter tastetrykk
     if (collide(arena, player)) {
@@ -233,3 +233,5 @@ function update(time = 0) {
     draw();  // Tegn brettet
     requestAnimationFrame(update);  // Oppdater for neste frame
 }
+
+
