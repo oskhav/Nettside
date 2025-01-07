@@ -32,28 +32,29 @@ hode nav ul li a {
 
 hode nav ul li a:hover {
     background-color: white;
-    color: black;
+    color: rgb(15, 15, 15);
     border-radius: 5px;
 }
 
 /* ======= HELTSEKSJON ======= */
 .heltseksjon {
-    background: url("../../Bilder/Bærekraft/bærekrafts\ målene.png");
+    background: url("");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: aliceblue;
+    color: rgb(241, 248, 245);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: #26581f;
 }
 
 .innhold h1 {
     font-size: 4em;
     margin-bottom: 300px;
-    color: #333;
+    color: #faf7f7;
 }
 
 .heltseksjon .innhold .undertekst {
