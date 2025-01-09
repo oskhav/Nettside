@@ -38,29 +38,36 @@ hode nav ul li a:hover {
 
 /* ======= HELTSEKSJON ======= */
 .heltseksjon {
-    background: url("");
+    background: url("../../Bilder/Bærekraft/braaa.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: rgb(241, 248, 245);
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Flytt innhold til høyre */
     align-items: center;
-    text-align: center;
-    background-color: #26581f;
+    text-align: right; /* Juster teksten til høyre */
+    padding-right: 5%; /* Avstand fra høyre kant */
+    padding-left: 5%; /* Sikkerhetsmargin fra venstre */
 }
 
-.innhold h1 {
+.heltseksjon .innhold {
+    max-width: 50%; /* Begrens bredde til halvparten av seksjonen */
+}
+
+.heltseksjon .innhold h1 {
     font-size: 4em;
-    margin-bottom: 300px;
-    color: #faf7f7;
+    color: #0a5207;
+    margin-bottom: 10px; /* Juster avstand mellom hovedoverskrift og underoverskrift */
 }
 
-.heltseksjon .innhold .undertekst {
+.heltseksjon .innhold p {
     font-size: 1.5em;
-    margin-top: 10px;
-    color: #ccc;
+    color: #0a5207;
+    margin-top: 0; /* Fjern ekstra avstand over underoverskriften */
+    font-weight: bold; /* Fremhev teksten hvis ønskelig */
+    text-align: center;
 }
 
 .rull-ned {
@@ -166,3 +173,76 @@ hode nav ul li a:hover {
       max-width: 80%;
     }
 }
+
+
+/*tabell*/
+
+/* Generelle stilinnstillinger */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Beholder for innholdet */
+  .container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Overskrifter */
+  h1, h2 {
+    text-align: center;
+    color: #0a5207;
+  }
+  
+  /* Tabellstil */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #0a5207;
+    color: white;
+  }
+  
+  table td {
+    background-color: #f9f9f9;
+  }
+  
+  table td[contenteditable="true"]:focus {
+    background-color: #e0ffe0;
+    outline: none;
+    border: 1px solid #0a5207;
+  }
+  
+  /* Knapp */
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0a5207;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #085c02;
+  }
+  
