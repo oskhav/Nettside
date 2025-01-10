@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oskar Nygård Havre</title>
   <link rel="stylesheet" href="../../CSS/Bærekraft/hjem.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 </head>
 <body>
   <hode>
@@ -29,7 +31,31 @@
     </div>
   </seksjon>
 
-
+  <h1>Matsvinn per innbygger i 2023</h1>
+  <div class="chart-container">
+    <canvas id="matsvinnChart"></canvas>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Verdikjedeledd</th>
+        <th>Endring målt i kg/innbygger</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Sjømat</td><td>-13 %</td></tr>
+      <tr><td>Matindustri (2022)</td><td>-20 %</td></tr>
+      <tr><td>Grossist</td><td>-9 %</td></tr>
+      <tr><td>Dagligvare</td><td>-42 %</td></tr>
+      <tr><td>Servering (2022)</td><td>-13 %</td></tr>
+      <tr><td>KBS</td><td>-13 %</td></tr>
+      <tr><td>Undervisning- og omsorgssektoren (2022)</td><td>-12 %</td></tr>
+      <tr><td>Husholdninger</td><td>-18 %</td></tr>
+      <tr><th>Totalt</th><th>-21 %</th></tr>
+    </tbody>
+  </table>
+  <script src="../../javaskript/Bærekraft/sirkel graf.js"></script>
+</body>
  
 
 
@@ -39,3 +65,5 @@
   </bunntekst>
 </body>
 </html>
+
+
