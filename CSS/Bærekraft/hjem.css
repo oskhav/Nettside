@@ -62,6 +62,13 @@ hode nav ul li a:hover {
     margin-bottom: 10px; /* Juster avstand mellom hovedoverskrift og underoverskrift */
 }
 
+h4 {
+font-size: 2em;
+margin-top: 20px;
+margin-bottom: 20px;
+
+}
+
 .heltseksjon .innhold p {
     font-size: 1.5em;
     color: #0a5207;
