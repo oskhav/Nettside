@@ -2,7 +2,7 @@ let score = 0;
 let timer = 60;
 let interval;
 const items = [
-    { id: 'item1', src: 'images/avis.png', bin: 'papir' },
+    { id: 'item1', src: '../../Melk.png', bin: 'papir' },
     { id: 'item2', src: 'images/plastflaske.png', bin: 'plast' },
     { id: 'item3', src: 'images/epleskrott.png', bin: 'mat' },
     { id: 'item4', src: 'images/glasskrukke.png', bin: 'glass' },
