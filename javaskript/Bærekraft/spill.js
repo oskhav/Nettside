@@ -1,19 +1,19 @@
 let score = 0;
 let timer = 60;
 let interval;
+
 const items = [
-    { id: 'item1', src: '../../Melk.png', bin: 'papir' },
-    { id: 'item2', src: 'images/plastflaske.png', bin: 'plast' },
-    { id: 'item3', src: 'images/epleskrott.png', bin: 'mat' },
-    { id: 'item4', src: 'images/glasskrukke.png', bin: 'glass' },
-    { id: 'item5', src: 'images/papp.png', bin: 'papir' },
-    { id: 'item6', src: 'images/plastpose.png', bin: 'plast' },
-    { id: 'item7', src: 'images/brod.png', bin: 'mat' },
-    { id: 'item8', src: 'images/vindusglass.png', bin: 'glass' },
+    { id: 'item1', src: '../../Bilder/Bærekraft/Melk.png', bin: 'papir' },
+    { id: 'item2', src: '../../Bilder/Bærekraft/pose.png', bin: 'plast' },
+    { id: 'item3', src: '../../Bilder/Bærekraft/epleskrott.png', bin: 'mat' },
+    { id: 'item4', src: '../../Bilder/Bærekraft/glass.webp', bin: 'glass' },
+    { id: 'item5', src: '../../Bilder/Bærekraft/354189.jpg', bin: 'papir' },
+    { id: 'item6', src: '../../images/plastpose.png', bin: 'plast' },
+    { id: 'item7', src: '../../images/brod.png', bin: 'mat' },
+    { id: 'item8', src: '../../images/vindusglass.png', bin: 'glass' }
 ];
 
 function startGame() {
-    // Tilfeldig utvalg av objekter
     const selectedItems = items.sort(() => 0.5 - Math.random()).slice(0, 6);
     const itemsContainer = document.getElementById('items');
     itemsContainer.innerHTML = '';
@@ -68,13 +68,12 @@ function drop(event) {
         item.draggable = false;
         item.style.border = "3px solid #4CAF50";
         item.style.cursor = "default";
-        updateScore(10); // Legg til poeng
+        updateScore(10);
     } else {
         item.style.border = "3px solid #E74C3C";
-        updateScore(-5); // Trekk fra poeng
+        updateScore(-5);
     }
 
-    // Sjekk om alle objekter er sortert
     if (document.querySelectorAll('.item[draggable="true"]').length === 0) {
         clearInterval(interval);
         alert(`Gratulerer! Du sorterte alt riktig og fikk ${score} poeng!`);
