@@ -8,8 +8,8 @@ const items = [
     { id: 'item3', src: '../../Bilder/Bærekraft/epleskrott.png', bin: 'mat' },
     { id: 'item4', src: '../../Bilder/Bærekraft/glass.webp', bin: 'glass' },
     { id: 'item5', src: '../../Bilder/Bærekraft/354189.jpg', bin: 'papir' },
-    { id: 'item6', src: '../../images/plastpose.png', bin: 'plast' },
-    { id: 'item7', src: '../../images/brod.png', bin: 'mat' },
+    { id: 'item6', src: '../../Bilder/Bærekraft/plast.webp', bin: 'plast' },
+    { id: 'item7', src: '../../Bilder/Bærekraft/gamrl gulrtot.avif', bin: 'mat' },
     { id: 'item8', src: '../../images/vindusglass.png', bin: 'glass' }
 ];
 
