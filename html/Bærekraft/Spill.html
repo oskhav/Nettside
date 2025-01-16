@@ -19,9 +19,6 @@
       </ul>
     </nav>
   </hode>
-    <body>
-        
-
     <h1>Skildesorteringsspill</h1>
     <p>Trekk objektene til riktig beholder før tiden går ut!</p>
     <div id="score-container">
@@ -29,7 +26,7 @@
         <p>Tid igjen: <span id="timer">60</span> sekunder</p>
     </div>
     <button id="start-button" onclick="startGame()">Start Spillet</button>
-    <div id="bins" style="display: none;"> <!-- Søppelbøtter er skjult før start -->
+    <div id="bins" style="display: none;">
         <div id="papir" class="bin" ondrop="drop(event)" ondragover="allowDrop(event)">
             <p>Papir</p>
         </div>
@@ -46,7 +43,7 @@
             <p>Restavfall</p>
         </div>
     </div>
-    <div id="items" style="display: none;"></div> <!-- Skjuler gjenstander før start -->
+    <div id="items" style="display: none;"></div>
     <script src="../../javaskript/Bærekraft/spill.js"></script>
 </body>
 </html>

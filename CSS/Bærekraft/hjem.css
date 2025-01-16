@@ -304,35 +304,60 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9; /* Lys bakgrunn */
 }
 
 h1 {
-    color: #4CAF50;
-    margin-top: 20px;
+    color: #4CAF50; /* Farge for tittel */
+    margin-top: 30px;
+    font-size: 2.5em;
 }
 
 #score-container {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+#start-button {
+    padding: 10px 20px;
     font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-button:hover {
+    background-color: #45a049;
 }
 
 #bins {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
+    gap: 30px;
+    margin: 30px 0;
 }
 
 .bin {
-    width: 120px;
-    height: 120px;
-    border: 2px solid #333;
-    border-radius: 10px;
-    background-color: #f0f0f0;
+    width: 150px;
+    height: 150px;
+    border: 3px solid #4CAF50;
+    border-radius: 15px;
+    background-color: #f9f9f9;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bin:hover {
+    transform: scale(1.05);
+    background-color: #e8e8e8;
 }
 
 #items {
@@ -340,16 +365,37 @@ h1 {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .item {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     cursor: grab;
-    margin: 10px;
+    margin: 15px;
     object-fit: contain;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border 0.3s ease;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item:active {
+    transform: scale(1.1);
+}
+
+.item[data-bin="correct"] {
+    border: 3px solid #4CAF50;
+}
+
+.item[data-bin="wrong"] {
+    border: 3px solid #E74C3C;
+}
+
+#timer {
+    font-size: 1.5em;
+    color: #E74C3C;
+    font-weight: bold;
 }
 
 
