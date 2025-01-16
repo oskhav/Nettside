@@ -9,7 +9,7 @@ const items = [
     { id: 'item4', src: '../../Bilder/Bærekraft/glass.webp', bin: 'glass' },
     { id: 'item5', src: '../../Bilder/Bærekraft/354189.jpg', bin: 'papir' },
     { id: 'item6', src: '../../Bilder/Bærekraft/plast.webp', bin: 'plast' },
-    { id: 'item7', src: '../../Bilder/Bærekraft/gammel_gulrot.avif', bin: 'mat' },
+    { id: 'item7', src: '../../Bilder/Bærekraft/gammel gulrot.avif', bin: 'mat' },
     { id: 'item8', src: '../../Bilder/Bærekraft/syltetøyglass.webp', bin: 'glass' },
     { id: 'item10', src: '../../Bilder/Bærekraft/tørkepapir.png', bin: 'rest' },
     { id: 'item12', src: '../../Bilder/Bærekraft/vaskemidel.png', bin: 'plast' }
