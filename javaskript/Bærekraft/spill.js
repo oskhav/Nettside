@@ -9,12 +9,20 @@ const items = [
     { id: 'item4', src: '../../Bilder/Bærekraft/glass.webp', bin: 'glass' },
     { id: 'item5', src: '../../Bilder/Bærekraft/354189.jpg', bin: 'papir' },
     { id: 'item6', src: '../../Bilder/Bærekraft/plast.webp', bin: 'plast' },
-    { id: 'item7', src: '../../Bilder/Bærekraft/gamrl gulrtot.avif', bin: 'mat' },
-    { id: 'item8', src: '../../images/vindusglass.png', bin: 'glass' }
+    { id: 'item7', src: '../../Bilder/Bærekraft/gammel_gulrot.avif', bin: 'mat' },
+    { id: 'item8', src: '../../Bilder/Bærekraft/vindusglass.png', bin: 'glass' },
+    { id: 'item9', src: '../../Bilder/Bærekraft/bananskall.png', bin: 'rest' },
+    { id: 'item10', src: '../../Bilder/Bærekraft/chips_pose.png', bin: 'rest' },
+    { id: 'item11', src: '../../Bilder/Bærekraft/avis.png', bin: 'papir' },
+    { id: 'item12', src: '../../Bilder/Bærekraft/plastflaske.png', bin: 'plast' }
 ];
 
 function startGame() {
-    const selectedItems = items.sort(() => 0.5 - Math.random()).slice(0, 6);
+    document.getElementById('start-button').style.display = 'none'; // Skjul start-knappen
+    document.getElementById('bins').style.display = 'flex'; // Vis søppelbøtter
+    document.getElementById('items').style.display = 'flex'; // Vis gjenstander
+
+    const selectedItems = items.sort(() => 0.5 - Math.random()).slice(0, 6); // Velg 6 tilfeldige elementer
     const itemsContainer = document.getElementById('items');
     itemsContainer.innerHTML = '';
 
@@ -44,8 +52,8 @@ function updateTimer() {
 
     if (timer <= 0) {
         clearInterval(interval);
-        alert(`Tiden er ute! Du fikk ${score} poeng.`);
-        startGame();
+        alert('Game Over! Tiden gikk ut!');
+        window.location.href = 'gameover.html'; // Send til Game Over-siden
     }
 }
 
@@ -61,23 +69,31 @@ function drop(event) {
     event.preventDefault();
     const itemId = event.dataTransfer.getData("text");
     const item = document.getElementById(itemId);
-    const bin = event.target;
+    const bin = event.target.closest('.bin'); // Sørg for at droppet skjer i en "bin"
 
-    if (item.dataset.bin === bin.id) {
-        bin.appendChild(item);
-        item.draggable = false;
-        item.style.border = "3px solid #4CAF50";
-        item.style.cursor = "default";
+    if (bin && item.dataset.bin === bin.id) {
+        const newItem = item.cloneNode(true);
+        newItem.style.margin = "5px";
+        newItem.draggable = false;
+        newItem.style.border = "3px solid #4CAF50";
+        newItem.style.cursor = "default";
+        bin.appendChild(newItem);
+
+        item.remove();
+
         updateScore(10);
     } else {
         item.style.border = "3px solid #E74C3C";
         updateScore(-5);
     }
 
+    // Sjekk om alle elementer er sortert
     if (document.querySelectorAll('.item[draggable="true"]').length === 0) {
         clearInterval(interval);
-        alert(`Gratulerer! Du sorterte alt riktig og fikk ${score} poeng!`);
-        startGame();
+        alert('Gratulerer! Du sorterte alt riktig!');
+        setTimeout(() => {
+            window.location.href = 'gratulerer.html'; // Send til Gratulerer-siden
+        }, 500); // Kort forsinkelse før siden lastes inn
     }
 }
 
@@ -85,6 +101,3 @@ function updateScore(points) {
     score += points;
     document.getElementById('score').textContent = score;
 }
-
-// Start spillet ved oppstart
-startGame();

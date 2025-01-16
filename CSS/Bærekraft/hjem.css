@@ -60,6 +60,19 @@ hode nav ul li a:hover {
     font-size: 4em;
     color: #0a5207;
     margin-bottom: 10px; /* Juster avstand mellom hovedoverskrift og underoverskrift */
+<<<<<<< Tabnine <<<<<<<
+/**//+
+ * This function is called when an item is being dragged.//+
+ * It sets the data transfer data to the id of the dragged item.//+
+ *//+
+ * @param {DragEvent} event - The event object representing the drag operation.//+
+ * @property {DataTransfer} event.dataTransfer - The object that carries the dragged data.//+
+ * @property {string} event.target.id - The id of the element being dragged.//+
+ *///+
+function drag(event) {//+
+    event.dataTransfer.setData("text", event.target.id);//+
+}//+
+>>>>>>> Tabnine >>>>>>>// {"conversationId":"831fa06e-55bc-4f97-b62a-96030711d85e","source":"instruct"}
 }
 
 h4 {
@@ -351,6 +364,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 
 
 
