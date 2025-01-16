@@ -16,12 +16,12 @@ const centerTextPlugin = {
     ctx.fillStyle = '#333';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('35', xCenter, yCenter - 10); // Plassér litt over midten for plass til "kg"
+    ctx.fillText('82.3', xCenter, yCenter - 10); // Plassér litt over midten for plass til "kg"
 
     // Undertekst: "kg"
     ctx.font = '16px Arial';
     ctx.fillStyle = '#666';
-    ctx.fillText('kg', xCenter, yCenter + 15); // Plassér litt under hovedteksten
+    ctx.fillText('kg per innbygger', xCenter, yCenter + 15); // Plassér litt under hovedteksten
 
     ctx.restore();
   }
@@ -34,12 +34,12 @@ new Chart(ctx, {
       'Jordbruk (2022)',
       'Sjømat (2022)',
       'Matindustri (2022)',
-      'Grossist',
+      'Husholdning',
       'Dagligvare',
       'Servering (2022)',
       'KBS',
       'Undervisning- og omsorg (2022)',
-      'Husholdninger'
+      'Grossist'
     ],
     datasets: [{
       data: [21, 3, 16, 4, 42, 11, 1, 1, 1],

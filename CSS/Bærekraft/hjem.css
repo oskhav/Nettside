@@ -69,6 +69,15 @@ margin-bottom: 20px;
 
 }
 
+.align-left {
+    display: flex;
+    flex-direction: column; /* Alt står i én vertikal linje */
+    align-items: flex-start; /* Juster til venstre */
+    text-align: left; /* Justerer tekst til venstre */
+    padding: 10px; /* Valgfritt: litt innrykk */
+    margin: 0; /* Fjerner ekstra margin */
+  }
+
 .heltseksjon .innhold p {
     font-size: 1.5em;
     color: #0a5207;
@@ -181,7 +190,6 @@ margin-bottom: 20px;
     }
 }
 
-
 /*sirkelgraf*/
 body {
     font-family: Arial, sans-serif;
@@ -292,7 +300,6 @@ body {
     background-color: #085c02;
   }
 
-
   /*sirkel graf*/
 
   
@@ -397,10 +404,5 @@ h1 {
     color: #E74C3C;
     font-weight: bold;
 }
-
-
-
-
-
 
 
