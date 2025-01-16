@@ -60,7 +60,6 @@ hode nav ul li a:hover {
     font-size: 4em;
     color: #0a5207;
     margin-bottom: 10px; /* Juster avstand mellom hovedoverskrift og underoverskrift */
-
 }
 
 h4 {
@@ -273,7 +272,7 @@ body {
   
   table td[contenteditable="true"]:focus {
     background-color: #e0ffe0;
-    outline: none
+    outline: none;
     border: 1px solid #0a5207;
   }
   
@@ -352,7 +351,6 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 
 
 
