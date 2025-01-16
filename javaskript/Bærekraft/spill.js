@@ -10,11 +10,9 @@ const items = [
     { id: 'item5', src: '../../Bilder/Bærekraft/354189.jpg', bin: 'papir' },
     { id: 'item6', src: '../../Bilder/Bærekraft/plast.webp', bin: 'plast' },
     { id: 'item7', src: '../../Bilder/Bærekraft/gammel_gulrot.avif', bin: 'mat' },
-    { id: 'item8', src: '../../Bilder/Bærekraft/vindusglass.png', bin: 'glass' },
-    { id: 'item9', src: '../../Bilder/Bærekraft/bananskall.png', bin: 'rest' },
-    { id: 'item10', src: '../../Bilder/Bærekraft/chips_pose.png', bin: 'rest' },
-    { id: 'item11', src: '../../Bilder/Bærekraft/avis.png', bin: 'papir' },
-    { id: 'item12', src: '../../Bilder/Bærekraft/plastflaske.png', bin: 'plast' }
+    { id: 'item8', src: '../../Bilder/Bærekraft/syltetøyglass.webp', bin: 'glass' },
+    { id: 'item10', src: '../../Bilder/Bærekraft/tørkepapir.png', bin: 'rest' },
+    { id: 'item12', src: '../../Bilder/Bærekraft/vaskemidel.png', bin: 'plast' }
 ];
 
 function startGame() {
