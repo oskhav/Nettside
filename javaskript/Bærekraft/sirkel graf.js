@@ -34,9 +34,9 @@ new Chart(ctx, {
       'Jordbruk (2022)',
       'Sjømat (2022)',
       'Matindustri (2022)',
+      'Servering',
       'Husholdning',
-      'Dagligvare',
-      'Servering (2022)',
+      'Dagligvare (2022)',
       'KBS',
       'Undervisning- og omsorg (2022)',
       'Grossist'
